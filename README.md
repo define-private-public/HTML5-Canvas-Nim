@@ -1,10 +1,23 @@
+HTML5 Canvas & Drawing for Nim
+==============================
+
+The official repo can be found on GitLab:
+https://gitlab.com/define-private-public/HTML5-Canvas-Nim
+
+It is where most of the develoment takes place.  But there is a GitHub mirror
+where issues can be logged and addressed:
+https://github.com/define-private-public/HTML5-Canvas-Nim
+
+This is still a work in progress, expect a better README later.
+
+
 TODO:
  - [ ] Professional README
    - Don't forget to link to the mozilla docs
  - [x] List of functions/properties to bind (https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D)
  - [ ] some examples/tests
- - [ ] GitHub mirror
- - [ ] License mention
+ - [x] GitHub mirror
+ - [ ] License mention in README
 
 To Bind:
  - [ ] rgb()
