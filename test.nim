@@ -39,6 +39,7 @@ proc textTest()=
     canvas = dom.document.getElementById("text-canvas").Canvas
     ctx = canvas.getContext2D()
     msg1 = "Nim+JS!"
+    origLineWidth = ctx.lineWidth
 
   ctx.font = "bold 48px Serif"
   ctx.fillStyle = "black"
@@ -48,10 +49,12 @@ proc textTest()=
     ctx.fillText(msg1, i.float, (20 - i).float)
 
   ctx.font = "bold italic 48px Serif"
+  ctx.lineWidth = 1.5
   ctx.strokeStyle = "white"
   ctx.strokeText(msg1, 10, 10)
 
   ctx.font = "24px Arial"
+  ctx.lineWidth = origLineWidth
   ctx.fillStyle = "green"
   ctx.strokeStyle = "blue"
   ctx.textAlign = Right
