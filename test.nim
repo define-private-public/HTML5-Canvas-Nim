@@ -10,8 +10,8 @@ dom.window.onload = proc(e: dom.Event) =
     canvas = dom.document.getElementById("render-area").Canvas
     ctx = canvas.getContext2D()
 
-#  ctx.font = font
-#  ctx.strokeText(msg, 10, 50)
+  ctx.font = font
+  ctx.strokeText(msg, 10, 50)
 
   ctx.strokeStyle = rgb(255, 0, 200)
   ctx.beginPath()
