@@ -44,10 +44,9 @@ To Bind & Test.  Key: `b`=bound, `x`=bound & tested
  - [ ] getLineDash()
  - [ ] setLineDash()
  - [ ] lineDashOffset
- - [ ] font
+ - [b] font
  - [ ] textAlign
  - [ ] textBaseline
- - [ ] direction
  - [x] fillStyle
  - [x] strokeStyle
  - [ ] createLinearGradient()

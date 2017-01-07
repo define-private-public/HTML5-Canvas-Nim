@@ -4,9 +4,20 @@
 type
   CanvasRenderingContext2D* = ref CanvasRenderingContext2DObj
   CanvasRenderingContext2DObj {.importc.} = object
-    font*: cstring
     strokeStyle*: cstring
     fillStyle*: cstring
+
+    font*: cstring
+    textAlign*: cstring
+    textBaseline*: cstring
+
+  TextAlignment* {.pure.} = enum
+    Left = "left",
+    Right = "right",
+    Center = "center",
+    Start = "start",
+    End = "end"
+    
 
 
 # Rectangle functions
@@ -29,6 +40,17 @@ proc strokeRect*(
 ) {.importcpp.}
 
 
+# TODO max width
+# Text functions
+proc fillText*(
+  c: CanvasRenderingContext2D;
+  text: cstring;
+  x, y: float
+) {.importcpp.}
+
+# TODO cleanup
+proc strokeText*(c: CanvasRenderingContext2D; txt: cstring, x, y: float) {.importcpp.}
+
 
 
 
@@ -36,7 +58,6 @@ proc beginPath*(c: CanvasRenderingContext2D) {.importcpp.}
 
 proc stroke*(c: CanvasRenderingContext2D) {.importcpp.}
 
-proc strokeText*(c: CanvasRenderingContext2D; txt: cstring, x, y: float) {.importcpp.}
 
 proc ellipse*(
   c: CanvasRenderingContext2D;

@@ -33,19 +33,28 @@ proc rectTest()=
   ctx.clearRect(20, 20, 25, 27.5)
 
 
+# Text functions
+proc textTest()=
+  let
+    canvas = dom.document.getElementById("text-canvas").Canvas
+    ctx = canvas.getContext2D()
+
+  ctx.font = "24px Serif"
+  ctx.fillStyle = "black"
+
+  ctx.fillText("Nim+JS HTML5!", 10, 50)
+
+
+
 # The dom on load
 dom.window.onload = proc(e: dom.Event) =
   canvasTest()
   rectTest()
+  textTest()
 
   let
-    font:string = "30px Arial"
-    msg:string = "Hello Nim+JS!"
     canvas = dom.document.getElementById("render-area").Canvas
     ctx = canvas.getContext2D()
-
-  ctx.font = font
-  ctx.strokeText(msg, 10, 50)
 
   ctx.strokeStyle = rgb(255, 0, 200)
   ctx.beginPath()
