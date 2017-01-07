@@ -39,13 +39,13 @@ To Bind & Test.  Key: `b`=bound, `x`=bound & tested
  - [x] fillText()
  - [x] strokeText()
  - [ ] measureText()
- - [b] lineWidth
- - [b] lineCap
- - [b] lineJoin
- - [b] miterLimit
- - [b] lineDashOffset
- - [ ] getLineDash()
- - [ ] setLineDash()
+ - [x] lineWidth
+ - [x] lineCap
+ - [x] lineJoin
+ - [x] miterLimit
+ - [x] lineDashOffset
+ - [x] getLineDash()
+ - [x] setLineDash()
  - [x] font
  - [x] textAlign
  - [x] textBaseline

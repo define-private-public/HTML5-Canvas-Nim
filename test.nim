@@ -101,6 +101,17 @@ proc lineTest()=
   ctx.stroke()
 
   ctx.miterLimit = 10
+  ctx.strokeStyle = rgb(0, 128, 255)
+  ctx.setLineDash(@[25.0, 10.0])
+  ctx.lineDashOffset = 23
+  ctx.lineWidth = 2.5
+  ctx.beginPath()
+  ctx.moveTo(20, 180)
+  ctx.lineTo(180, 180)
+  ctx.stroke()
+
+  echo "This is only a test for getting dash values, please ignore:"
+  echo $ctx.getLineDash()
 
 
 # The dom on load

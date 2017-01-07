@@ -102,6 +102,12 @@ proc strokeText*(
 
 
 # Line functions
+proc getLineDash*(c: CanvasRenderingContext2D): seq[float] {.importcpp.} 
+
+proc setLineDash*(
+  c: CanvasRenderingContext2D;
+  segments: seq[float]
+) {.importcpp.} 
 
 
 
