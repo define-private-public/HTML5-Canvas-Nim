@@ -14,6 +14,7 @@ This is still a work in progress, expect a better README later.
 TODO:
  - [ ] Professional README
    - Don't forget to link to the mozilla docs
+   - 2D drawing canvas only (maybe other ones)?
  - [x] List of functions/properties to bind (https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D)
  - [ ] some examples/tests
  - [x] GitHub mirror
@@ -22,12 +23,11 @@ TODO:
 
 To Bind & Test.  Key: `b`=bound, `x`=bound & tested
  - [b] rgb()
- - [ ] Canvas
- - [ ] height
- - [ ] width 
- - [ ] toDataURL()
- - [ ] toBlob()
- - [ ] getContext()
+ - [x] Canvas
+ - [x] width 
+ - [x] height
+ - [x] toDataURL()
+ - [x] getContext()
  - [ ] clearRect()
  - [ ] fillRect()
  - [ ] strokeRect()

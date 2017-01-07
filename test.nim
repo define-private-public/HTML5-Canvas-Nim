@@ -3,7 +3,25 @@ from math import Pi
 import html5_canvas
 
 
+# TODO test creating a canvas dynamically
+
+
+# A Blank canvas
+proc canvasTest()=
+  let
+    canvas = dom.document.getElementById("canvas-test").Canvas
+
+  canvas.height = canvas.width
+
+  echo "These are just some data urls of the first mini-canvas, don't mind them:"
+  echo $canvas.toDataURL("image/jpeg", 0.2)
+  echo $canvas.toDataURL()
+
+
+# The dom on load
 dom.window.onload = proc(e: dom.Event) =
+  canvasTest()
+
   let
     font:string = "30px Arial"
     msg:string = "Hello Nim+JS!"
