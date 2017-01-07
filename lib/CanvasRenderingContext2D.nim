@@ -4,6 +4,7 @@
 type
   CanvasRenderingContext2D* = ref CanvasRenderingContext2DObj
   CanvasRenderingContext2DObj {.importc.} = object
+    # TODO what about gradients?  This looks like it only supports strings right now
     strokeStyle*: cstring
     fillStyle*: cstring
 
@@ -11,23 +12,44 @@ type
     textAlign*: TextAlignment
     textBaseline*: TextBaseline
 
+    lineWidth*: float
+    lineCap*: LineCap
+    lineJoin*: LineJoin
+    miterLimit*: float
+    lineDashOffset*: float
+
   TextAlignment* = distinct cstring
   TextBaseline* = distinct cstring 
+  LineCap* = distinct cstring
+  LineJoin* = distinct cstring
 
 const
+  # TextAlignment
   Left* = "left".TextAlignment
   Right* = "right".TextAlignment
   Center* = "center".TextAlignment
   Start* = "start".TextAlignment
   End* = "end".TextAlignment
 
-const
+  # TextBaseline
   Top* = "top".TextBaseline
   Hanging* = "hanging".TextBaseline
   Middle* = "middle".TextBaseline
   Alphabetic* = "alphabetic".TextBaseline
   Ideographic* = "ideographic".TextBaseline
   Bottom* = "bottom".TextBaseline
+
+  # TODO figure out a way to drop the "Cap," and "Join," portions of these.
+  #      The problem is that plain old "Round," would conflict
+  #LineCap
+  ButtCap* = "butt".LineCap
+  RoundCap* = "round".LineCap
+  SquareCap* = "square".LineCap
+  
+  #LineJoin
+  RoundJoin* = "round".LineJoin
+  BevelJoin* = "bevel".LineJoin
+  MiterJoin* = "miter".LineJoin
     
 
 
@@ -79,6 +101,8 @@ proc strokeText*(
 ) {.importcpp.}
 
 
+# Line functions
+
 
 
 
@@ -87,6 +111,10 @@ proc strokeText*(
 proc beginPath*(c: CanvasRenderingContext2D) {.importcpp.}
 
 proc stroke*(c: CanvasRenderingContext2D) {.importcpp.}
+
+proc moveTo*(c: CanvasRenderingContext2D; x, y: float) {.importcpp.}
+
+proc lineTo*(c: CanvasRenderingContext2D; x, y: float) {.importcpp.}
 
 proc ellipse*(
   c: CanvasRenderingContext2D;

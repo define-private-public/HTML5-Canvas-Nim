@@ -39,18 +39,18 @@ To Bind & Test.  Key: `b`=bound, `x`=bound & tested
  - [x] fillText()
  - [x] strokeText()
  - [ ] measureText()
- - [ ] lineWidth
- - [ ] lineCap
- - [ ] lineJoin
- - [ ] miterLimit
+ - [b] lineWidth
+ - [b] lineCap
+ - [b] lineJoin
+ - [b] miterLimit
+ - [b] lineDashOffset
  - [ ] getLineDash()
  - [ ] setLineDash()
- - [ ] lineDashOffset
  - [x] font
  - [x] textAlign
  - [x] textBaseline
- - [x] fillStyle
- - [x] strokeStyle
+ - [ ] fillStyle
+ - [ ] strokeStyle
  - [ ] createLinearGradient()
  - [ ] createRadialGraident()
  - [ ] CanvasImageSource

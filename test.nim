@@ -60,11 +60,26 @@ proc textTest()=
   ctx.fillText("canvas tag)", 190, 200, 50);
 
 
+# Line functions
+proc lineTest()=
+  let
+    canvas = dom.document.getElementById("line-canvas").Canvas
+    ctx = canvas.getContext2D()
+
+  ctx.lineWidth = 15
+
+  ctx.beginPath()
+  ctx.moveTo(5, 5);
+  ctx.lineTo(50, 50);
+  ctx.stroke();
+
+
 # The dom on load
 dom.window.onload = proc(e: dom.Event) =
   canvasTest()
   rectTest()
   textTest()
+  lineTest()
 
   let
     canvas = dom.document.getElementById("render-area").Canvas
