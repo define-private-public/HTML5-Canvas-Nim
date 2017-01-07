@@ -39,10 +39,11 @@ proc textTest()=
     canvas = dom.document.getElementById("text-canvas").Canvas
     ctx = canvas.getContext2D()
 
-  ctx.font = "24px Serif"
+  ctx.font = "bold 24px Serif"
   ctx.fillStyle = "black"
+  ctx.textBaseline = Hanging
 
-  ctx.fillText("Nim+JS HTML5!", 10, 50)
+  ctx.fillText("Nim+JS HTML5!", 4, 4)
 
 
 

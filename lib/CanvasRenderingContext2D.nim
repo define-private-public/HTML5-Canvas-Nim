@@ -9,7 +9,7 @@ type
 
     font*: cstring
     textAlign*: cstring
-    textBaseline*: cstring
+    textBaseline*: TextBaseline
 
   TextAlignment* {.pure.} = enum
     Left = "left",
@@ -17,6 +17,17 @@ type
     Center = "center",
     Start = "start",
     End = "end"
+
+  TextBaseline* = distinct cstring 
+
+
+const
+  Top* = "top".TextBaseline
+  Hanging* = "hanging".TextBaseline
+  Middle* = "middle".TextBaseline
+  Alphabetic* = "alphabetic".TextBaseline
+  Ideographic* = "ideographic".TextBaseline
+  Bottom* = "bottom".TextBaseline
     
 
 
