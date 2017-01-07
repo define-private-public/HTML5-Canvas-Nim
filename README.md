@@ -5,7 +5,7 @@ The official repo can be found on GitLab:
 https://gitlab.com/define-private-public/HTML5-Canvas-Nim
 
 It is where most of the develoment takes place.  But there is a GitHub mirror
-where issues can be logged and addressed:
+where issues can be logged and will be addressed:
 https://github.com/define-private-public/HTML5-Canvas-Nim
 
 This is still a work in progress, expect a better README later.
