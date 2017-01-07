@@ -25,12 +25,15 @@ proc rectTest()=
     ctx = canvas.getContext2D()
 
   ctx.fillStyle = "green"
-  ctx.fillRect(10, 10.5, 50.5, 50)
-  
-  ctx.strokeStyle = "blue"
-  ctx.strokeRect(30.5, 30, 50, 50.5)
+  ctx.fillRect(10, 10.5, 125.5, 125)
 
   ctx.clearRect(20, 20, 25, 27.5)
+  ctx.clearRect(30, 30, 60, 67.5)
+  
+  ctx.strokeStyle = "blue"
+  ctx.strokeRect(50.5, 50, 125, 125.5)
+
+  ctx.clearRect(30, 30, 50, 40)
 
 
 # Text functions
