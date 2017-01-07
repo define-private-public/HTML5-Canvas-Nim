@@ -8,18 +8,18 @@ type
     fillStyle*: cstring
 
     font*: cstring
-    textAlign*: cstring
+    textAlign*: TextAlignment
     textBaseline*: TextBaseline
 
-  TextAlignment* {.pure.} = enum
-    Left = "left",
-    Right = "right",
-    Center = "center",
-    Start = "start",
-    End = "end"
-
+  TextAlignment* = distinct cstring
   TextBaseline* = distinct cstring 
 
+const
+  Left* = "left".TextAlignment
+  Right* = "right".TextAlignment
+  Center* = "center".TextAlignment
+  Start* = "start".TextAlignment
+  End* = "end".TextAlignment
 
 const
   Top* = "top".TextBaseline
@@ -59,8 +59,12 @@ proc fillText*(
   x, y: float
 ) {.importcpp.}
 
-# TODO cleanup
-proc strokeText*(c: CanvasRenderingContext2D; txt: cstring, x, y: float) {.importcpp.}
+# TODO max width
+proc strokeText*(
+  c: CanvasRenderingContext2D;
+  text: cstring;
+  x, y: float
+) {.importcpp.}
 
 
 

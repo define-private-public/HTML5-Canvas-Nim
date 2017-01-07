@@ -38,12 +38,18 @@ proc textTest()=
   let
     canvas = dom.document.getElementById("text-canvas").Canvas
     ctx = canvas.getContext2D()
+    msg = "Nim+JS!"
 
-  ctx.font = "bold 24px Serif"
+  ctx.font = "bold 48px Serif"
   ctx.fillStyle = "black"
   ctx.textBaseline = Hanging
 
-  ctx.fillText("Nim+JS HTML5!", 4, 4)
+  for i in 4..<16:
+    ctx.fillText(msg, i.float, (20 - i).float)
+
+  ctx.font = "bold italic 48px Serif"
+  ctx.strokeStyle = "white"
+  ctx.strokeText(msg, 10, 10)
 
 
 
