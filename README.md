@@ -19,7 +19,7 @@ TODO:
  - [x] GitHub mirror
  - [ ] License mention in README
 
-To Bind:
+To Bind & Test:
  - [ ] rgb()
  - [ ] Canvas
  - [ ] height
@@ -99,3 +99,4 @@ To Bind:
 Extra:
  - [ ] shadowOffset to take Nim's tuples instead?
  - [ ] SVGMatrix <-> Nim Matrix
+ - [ ] Play nice with `colors` module

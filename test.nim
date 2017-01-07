@@ -13,6 +13,7 @@ dom.window.onload = proc(e: dom.Event) =
 #  ctx.font = font
 #  ctx.strokeText(msg, 10, 50)
 
+  ctx.strokeStyle = rgb(255, 0, 200)
   ctx.beginPath()
   ctx.ellipse(100, 100, 50, 75, 45 * Pi / 180, 0, 1.5 * Pi)
   ctx.stroke()

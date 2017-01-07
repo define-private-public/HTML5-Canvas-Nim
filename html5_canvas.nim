@@ -1,8 +1,9 @@
 # TODO header
-# TODO check for defined(js)?
 
 import dom
 from math import Pi
+
+include lib/rgb
 
 
 type
@@ -12,9 +13,10 @@ type
   CanvasRenderingContext2D* = ref CanvasRenderingContext2DObj
   CanvasRenderingContext2DObj {.importc.} = object
     font*: cstring
+    strokeStyle*: cstring
 
 
-proc getContext2D*(c: Canvas): CanvasRenderingContext2D =
+proc getContext2D*(c: Canvas): CanvasRenderingContext2D {.inline.} =
   {.emit: "`result` = `c`.getContext('2d');".}
 
 
