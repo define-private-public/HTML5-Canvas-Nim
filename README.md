@@ -15,6 +15,8 @@ TODO:
  - [ ] Professional README
    - Don't forget to link to the mozilla docs
    - 2D drawing canvas only (maybe other ones)?
+   - If something doesn't have support accross all major browsers, it's not supported
+   - Most experimental things aren't included, unless is has major support (see above)
  - [x] List of functions/properties to bind (https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D)
  - [ ] some examples/tests
  - [x] GitHub mirror
