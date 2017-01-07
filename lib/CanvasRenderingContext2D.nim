@@ -6,6 +6,30 @@ type
   CanvasRenderingContext2DObj {.importc.} = object
     font*: cstring
     strokeStyle*: cstring
+    fillStyle*: cstring
+
+
+# Rectangle functions
+proc clearRect*(
+  c: CanvasRenderingContext2D;
+  x, y: float;
+  width, height: float
+) {.importcpp.}
+
+proc fillRect*(
+  c: CanvasRenderingContext2D;
+  x, y: float;
+  width, height: float
+) {.importcpp.}
+
+proc strokeRect*(
+  c: CanvasRenderingContext2D;
+  x, y: float;
+  width, height: float
+) {.importcpp.}
+
+
+
 
 
 proc beginPath*(c: CanvasRenderingContext2D) {.importcpp.}

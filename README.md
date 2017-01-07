@@ -19,6 +19,8 @@ TODO:
  - [ ] some examples/tests
  - [x] GitHub mirror
  - [ ] License mention in README
+ - [ ] Check into using enumerations instead of making the programmer pass in strings
+   - e.g. the `lineCap` field
 
 
 To Bind & Test.  Key: `b`=bound, `x`=bound & tested
@@ -28,9 +30,9 @@ To Bind & Test.  Key: `b`=bound, `x`=bound & tested
  - [x] height
  - [x] toDataURL()
  - [x] getContext()
- - [ ] clearRect()
- - [ ] fillRect()
- - [ ] strokeRect()
+ - [x] clearRect()
+ - [x] fillRect()
+ - [x] strokeRect()
  - [ ] TextMetrics
  - [ ] fillText()
  - [ ] strokeText()
@@ -46,8 +48,8 @@ To Bind & Test.  Key: `b`=bound, `x`=bound & tested
  - [ ] textAlign
  - [ ] textBaseline
  - [ ] direction
- - [ ] fillStyle
- - [ ] strokeStyle
+ - [x] fillStyle
+ - [x] strokeStyle
  - [ ] createLinearGradient()
  - [ ] createRadialGraident()
  - [ ] CanvasImageSource

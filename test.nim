@@ -6,10 +6,10 @@ import html5_canvas
 # TODO test creating a canvas dynamically
 
 
-# A Blank canvas
+# A Blank canvas for canvas info
 proc canvasTest()=
   let
-    canvas = dom.document.getElementById("canvas-test").Canvas
+    canvas = dom.document.getElementById("info-canvas").Canvas
 
   canvas.height = canvas.width
 
@@ -18,9 +18,25 @@ proc canvasTest()=
   echo $canvas.toDataURL()
 
 
+# Rectangle functions
+proc rectTest()=
+  let
+    canvas = dom.document.getElementById("rect-canvas").Canvas
+    ctx = canvas.getContext2D()
+
+  ctx.fillStyle = "green"
+  ctx.fillRect(10, 10.5, 50.5, 50)
+  
+  ctx.strokeStyle = "blue"
+  ctx.strokeRect(30.5, 30, 50, 50.5)
+
+  ctx.clearRect(20, 20, 25, 27.5)
+
+
 # The dom on load
 dom.window.onload = proc(e: dom.Event) =
   canvasTest()
+  rectTest()
 
   let
     font:string = "30px Arial"
