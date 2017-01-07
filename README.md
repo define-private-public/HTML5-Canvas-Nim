@@ -19,8 +19,9 @@ TODO:
  - [x] GitHub mirror
  - [ ] License mention in README
 
-To Bind & Test:
- - [ ] rgb()
+
+To Bind & Test.  Key: `b`=bound, `x`=bound & tested
+ - [b] rgb()
  - [ ] Canvas
  - [ ] height
  - [ ] width 
