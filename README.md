@@ -34,8 +34,8 @@ To Bind & Test.  Key: `b`=bound, `x`=bound & tested
  - [x] fillRect()
  - [x] strokeRect()
  - [ ] TextMetrics
- - [ ] fillText()
- - [ ] strokeText()
+ - [x] fillText()
+ - [x] strokeText()
  - [ ] measureText()
  - [ ] lineWidth
  - [ ] lineCap
@@ -44,9 +44,9 @@ To Bind & Test.  Key: `b`=bound, `x`=bound & tested
  - [ ] getLineDash()
  - [ ] setLineDash()
  - [ ] lineDashOffset
- - [b] font
- - [ ] textAlign
- - [ ] textBaseline
+ - [x] font
+ - [x] textAlign
+ - [x] textBaseline
  - [x] fillStyle
  - [x] strokeStyle
  - [ ] createLinearGradient()

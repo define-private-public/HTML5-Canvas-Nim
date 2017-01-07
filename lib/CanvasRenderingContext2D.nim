@@ -51,7 +51,6 @@ proc strokeRect*(
 ) {.importcpp.}
 
 
-# TODO max width
 # Text functions
 proc fillText*(
   c: CanvasRenderingContext2D;
@@ -59,12 +58,28 @@ proc fillText*(
   x, y: float
 ) {.importcpp.}
 
-# TODO max width
+proc fillText*(
+  c: CanvasRenderingContext2D;
+  text: cstring;
+  x, y: float;
+  maxWidth: float
+) {.importcpp.}
+
 proc strokeText*(
   c: CanvasRenderingContext2D;
   text: cstring;
   x, y: float
 ) {.importcpp.}
+
+proc strokeText*(
+  c: CanvasRenderingContext2D;
+  text: cstring;
+  x, y: float;
+  maxWidth: float
+) {.importcpp.}
+
+
+
 
 
 
@@ -72,7 +87,6 @@ proc strokeText*(
 proc beginPath*(c: CanvasRenderingContext2D) {.importcpp.}
 
 proc stroke*(c: CanvasRenderingContext2D) {.importcpp.}
-
 
 proc ellipse*(
   c: CanvasRenderingContext2D;
