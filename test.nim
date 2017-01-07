@@ -66,12 +66,41 @@ proc lineTest()=
     canvas = dom.document.getElementById("line-canvas").Canvas
     ctx = canvas.getContext2D()
 
-  ctx.lineWidth = 15
 
+  ctx.lineWidth = 15
+  ctx.lineCap = RoundCap
+  ctx.lineJoin = RoundJoin
+  ctx.strokeStyle = rgb(255, 0, 128)
   ctx.beginPath()
-  ctx.moveTo(5, 5);
-  ctx.lineTo(50, 50);
-  ctx.stroke();
+  ctx.moveTo(10, 10)
+  ctx.lineTo(50, 50)
+  ctx.lineTo(10, 90)
+  ctx.stroke()
+
+  ctx.lineCap = Buttcap
+  ctx.lineJoin = BevelJoin
+  ctx.strokeStyle = rgb(255, 128, 0)
+  ctx.lineWidth = 10
+  ctx.beginPath()
+  ctx.moveTo(60, 10)
+  ctx.lineTo(110, 50)
+  ctx.lineTo(140, 5)
+  ctx.lineTo(180, 75)
+  ctx.stroke()
+
+  ctx.miterLimit = 4
+  ctx.strokeStyle = rgb(0, 255, 128)
+  ctx.lineCap = SquareCap
+  ctx.lineJoin = MiterJoin
+  ctx.lineWidth = 5
+  ctx.beginPath()
+  ctx.moveTo(20, 150)
+  for x in countup(30, 180, 15):
+    let y = if x mod 10 == 0: 100 else: 150
+    ctx.lineTo(x.float, y.float)
+  ctx.stroke()
+
+  ctx.miterLimit = 10
 
 
 # The dom on load
