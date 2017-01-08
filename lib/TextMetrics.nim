@@ -7,5 +7,5 @@ import dom
 type
   TextMetrics* = ref TextMetricsObj
   TextMetricsObj {.importc.} = object
-    width*: float 
+    width*: float   # This is read-only
 

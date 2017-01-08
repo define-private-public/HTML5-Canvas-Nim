@@ -100,6 +100,11 @@ proc strokeText*(
   maxWidth: float
 ) {.importcpp.}
 
+proc measureText*(
+  c: CanvasRenderingContext2D;
+  text: cstring
+): TextMetrics {.importcpp.}
+
 
 # Line functions
 proc getLineDash*(c: CanvasRenderingContext2D): seq[float] {.importcpp.} 

@@ -56,6 +56,10 @@ proc textTest()=
   ctx.strokeStyle = "white"
   ctx.strokeText(msg1, 10, 10)
 
+  echo "This is only some TextMetrics info code, pay no mind:"
+  echo ctx.measureText(msg1).width;
+  var asdf = ctx.measureText(msg1)
+
   ctx.font = "24px Arial"
   ctx.lineWidth = origLineWidth
   ctx.fillStyle = "green"
@@ -64,6 +68,7 @@ proc textTest()=
   ctx.textBaseline = Bottom
   ctx.strokeText("(in a HTML5", 200, 180, 80);
   ctx.fillText("canvas tag)", 190, 200, 50);
+
 
 
 # Line functions
