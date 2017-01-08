@@ -2,6 +2,7 @@
 
 import dom
 include lib/rgb
+include lib/ImageData
 include lib/TextMetrics
 include lib/CanvasGradient
 include lib/CanvasPattern

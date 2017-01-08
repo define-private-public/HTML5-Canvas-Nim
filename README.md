@@ -52,8 +52,8 @@ To Bind & Test.  Key: `b`=bound, `x`=bound & tested
  - [x] CanvasGradient
  - [x] addColorStop()
  - [b] CanvasPattern
- - [b] fillStyle
- - [b] strokeStyle
+ - [b] fillStyle   [There's a set, but what about get?]
+ - [b] strokeStyle [See above]
  - [x] createLinearGradient()
  - [x] createRadialGraident()
  - [ ] CanvasImageSource
@@ -90,10 +90,10 @@ To Bind & Test.  Key: `b`=bound, `x`=bound & tested
  - [ ] globalAlpha
  - [ ] globalCompositeOperation
  - [ ] drawImage()
+ - [b] ImageData
  - [ ] createImageData()
  - [ ] getImageData()
  - [ ] putImageData()
- - [ ] ImageData
  - [ ] imageSmoothingEnabled  [EXP]
  - [ ] save()
  - [ ] restore
