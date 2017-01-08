@@ -155,6 +155,28 @@ proc gradAndPattTest()=
   ctx.stroke()
 
 
+proc shadowTest()=
+  let
+    canvas = dom.document.getElementById("shadow-canvas").Canvas
+    ctx = canvas.getContext2D()
+
+  ctx.fillStyle = rgb(0, 0, 0)
+  ctx.fillRect(0, 0, canvas.width.float, canvas.height.float)
+
+  ctx.shadowColor = "red"
+  ctx.fillStyle = "orange"
+  ctx.shadowBlur = 75
+  ctx.fillRect(10, 10, 80, 80)
+
+  ctx.shadowOffsetX = -15
+  ctx.shadowOffsetY = 5
+  ctx.shadowBlur = 2
+  ctx.fillStyle = "green"
+  ctx.shadowColor = "yellow"
+  ctx.fillRect(100, 100, 80, 50)
+
+
+
 # The dom on load
 dom.window.onload = proc(e: dom.Event) =
   canvasTest()
@@ -162,6 +184,7 @@ dom.window.onload = proc(e: dom.Event) =
   textTest()
   lineTest()
   gradAndPattTest()
+  shadowTest()
 
   let
     canvas = dom.document.getElementById("render-area").Canvas

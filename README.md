@@ -17,6 +17,7 @@ TODO:
    - 2D drawing canvas only (maybe other ones)?
    - If something doesn't have support accross all major browsers, it's not supported
    - Most experimental things aren't included, unless is has major support (see above)
+   - For CanvasImageSource, <video> & Blob are not currently supported
  - [x] List of functions/properties to bind (https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D)
  - [ ] some examples/tests
  - [x] GitHub mirror
@@ -25,85 +26,87 @@ TODO:
    - e.g. the `lineCap` field
 
 
-To Bind & Test.  Key: `b`=bound, `x`=bound & tested
- - [x] rgb()
- - [x] Canvas
- - [x] width 
- - [x] height
- - [x] toDataURL()
- - [ ] getContext()  [Only a hard coded one for 2D exists, add a generic one too]
- - [x] clearRect()
- - [x] fillRect()
- - [x] strokeRect()
- - [x] TextMetrics
- - [x] fillText()
- - [x] strokeText()
- - [x] measureText()
- - [x] lineWidth
- - [x] lineCap
- - [x] lineJoin
- - [x] miterLimit
- - [x] lineDashOffset
- - [x] getLineDash()
- - [x] setLineDash()
- - [x] font
- - [x] textAlign
- - [x] textBaseline
- - [x] CanvasGradient
- - [x] addColorStop()
- - [b] CanvasPattern
- - [b] fillStyle   [There's a set, but what about get?]
- - [b] strokeStyle [See above]
- - [x] createLinearGradient()
- - [x] createRadialGraident()
- - [ ] CanvasImageSource
- - [ ] createPattern()
- - [ ] shadowBlur
- - [ ] shadowColor
- - [ ] shadowOffsetX
- - [ ] shadowOffsetY
- - [ ] beginPath()
- - [ ] closePath()
- - [ ] moveTo()
- - [ ] lineTo()
- - [ ] bezierCurveTo()
- - [ ] quadraticCurveTo()
- - [ ] arc()
- - [ ] arcTo()
- - [ ] ellipse()  [EXP]
- - [ ] rect()
- - [ ] fill()
- - [ ] stroke()
- - [ ] drawFocusIfNeeded()
- - [ ] scrollPathIntoView()
- - [ ] clip()
- - [ ] isPointInPath()
- - [ ] isPointInStroke()
- - [ ] currentTransform
- - [ ] rotate()
- - [ ] scale()
- - [ ] translate()
- - [ ] transform()
- - [ ] setTransform()
- - [ ] resetTransform()
- - [ ] SVGMatrix
- - [ ] globalAlpha
- - [ ] globalCompositeOperation
- - [ ] drawImage()
- - [b] ImageData
- - [ ] createImageData()
- - [ ] getImageData()
- - [ ] putImageData()
- - [ ] imageSmoothingEnabled  [EXP]
- - [ ] save()
- - [ ] restore
- - [ ] canvas
- - [ ] addHitRegion()  [EXP]
- - [ ] removeHitRegion()  [EXP]
- - [ ] clearHitRegions()  [EXP]
+To Bind & Test.
+Key: `b`=bound, `x`=bound & tested
+
+[x] rgb()
+[x] Canvas
+[x] width 
+[x] height
+[x] toDataURL()
+[ ] getContext()  [Only a hard coded one for 2D exists, add a generic one too]
+[x] clearRect()
+[x] fillRect()
+[x] strokeRect()
+[x] TextMetrics
+[x] fillText()
+[x] strokeText()
+[x] measureText()
+[x] lineWidth
+[x] lineCap
+[x] lineJoin
+[x] miterLimit
+[x] lineDashOffset
+[x] getLineDash()
+[x] setLineDash()
+[x] font
+[x] textAlign
+[x] textBaseline
+[x] CanvasGradient
+[x] addColorStop()
+[b] CanvasPattern
+[b] fillStyle   [There's a set, but what about get?]
+[b] strokeStyle [See above]
+[x] createLinearGradient()
+[x] createRadialGraident()
+[ ] CanvasImageSource
+[ ] createPattern()
+[x] shadowBlur
+[x] shadowColor
+[x] shadowOffsetX
+[x] shadowOffsetY
+[ ] beginPath()
+[ ] closePath()
+[ ] moveTo()
+[ ] lineTo()
+[ ] bezierCurveTo()
+[ ] quadraticCurveTo()
+[ ] arc()
+[ ] arcTo()
+[ ] ellipse()  [EXP]
+[ ] rect()
+[ ] fill()
+[ ] stroke()
+[ ] drawFocusIfNeeded()
+[ ] scrollPathIntoView()
+[ ] clip()
+[ ] isPointInPath()
+[ ] isPointInStroke()
+[ ] currentTransform
+[ ] rotate()
+[ ] scale()
+[ ] translate()
+[ ] transform()
+[ ] setTransform()
+[ ] resetTransform()
+[ ] SVGMatrix
+[ ] globalAlpha
+[ ] globalCompositeOperation
+[ ] drawImage()
+[b] ImageData
+[ ] createImageData()
+[ ] getImageData()
+[ ] putImageData()
+[ ] imageSmoothingEnabled  [EXP]
+[ ] save()
+[ ] restore
+[ ] canvas
+[ ] addHitRegion()  [EXP]
+[ ] removeHitRegion()  [EXP]
+[ ] clearHitRegions()  [EXP]
 
 
 Extra:
- - [ ] shadowOffset to take Nim's tuples instead?
- - [ ] SVGMatrix <-> Nim Matrix
- - [ ] Play nice with `colors` module
+[ ] shadowOffset to take Nim's tuples instead?
+[ ] SVGMatrix <-> Nim Matrix
+[ ] Play nice with `colors` module

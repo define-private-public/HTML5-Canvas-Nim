@@ -14,6 +14,11 @@ type
     miterLimit*: float
     lineDashOffset*: float
 
+    shadowBlur*: float
+    shadowColor*: cstring
+    shadowOffsetX*: float
+    shadowOffsetY*: float
+
   TextAlignment* = distinct cstring
   TextBaseline* = distinct cstring 
   LineCap* = distinct cstring
