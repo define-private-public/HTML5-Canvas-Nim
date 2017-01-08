@@ -32,6 +32,20 @@ proc `fillStyle=`*(
 ) {.inline.} =
   {.emit: "`result` = `ctx`.fillStyle = `color`;".}
 
+proc `fillStyle=`*(
+  ctx: CanvasRenderingContext2D;
+  gradient: CanvasGradient
+) {.inline.} =
+  {.emit: "`result` = `ctx`.fillStyle = `gradient`;".}
+
+# TODO this needs testing
+proc `fillStyle=`*(
+  ctx: CanvasRenderingContext2D;
+  pattern: CanvasPattern
+) {.inline.} =
+  {.emit: "`result` = `ctx`.fillStyle = `pattern`;".}
+
+
 
 const
   # TextAlignment
@@ -130,7 +144,7 @@ proc createLinearGradient*(
   c: CanvasRenderingContext2D;
   x0, y0: float;
   x1, y1: float;
-) {.importcpp.}
+): CanvasGradient {.importcpp.}
 
 proc createRadialGradient*(
   c: CanvasRenderingContext2D;
@@ -138,7 +152,7 @@ proc createRadialGradient*(
   r0: float;
   x1, y1: float;
   r1: float
-) {.importcpp.}
+): CanvasGradient {.importcpp.}
 
 
 

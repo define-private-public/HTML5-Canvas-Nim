@@ -58,7 +58,6 @@ proc textTest()=
 
   echo "This is only some TextMetrics info code, pay no mind:"
   echo ctx.measureText(msg1).width;
-  var asdf = ctx.measureText(msg1)
 
   ctx.font = "24px Arial"
   ctx.lineWidth = origLineWidth
@@ -129,6 +128,19 @@ proc gradAndPattTest()=
   let
     canvas = dom.document.getElementById("grad-and-patt-canvas").Canvas
     ctx = canvas.getContext2D()
+
+  var grad = ctx.createLinearGradient(0, 0, 80, 20)
+  grad.addColorStop(0, "green")
+  grad.addColorStop(0.5, "yellow")
+  grad.addColorStop(1, rgb(128, 255, 0))
+  ctx.fillStyle = grad
+  ctx.fillRect(4, 4, 100, 100)
+
+  grad = ctx.createRadialGradient(70, 70, 20, 0, 0, 250)
+  grad.addColorStop(1, "cyan")
+  grad.addColorStop(0, "magenta")
+  ctx.fillStyle = grad
+  ctx.fillRect(80, 80, 100, 100)
 
 
 # The dom on load
