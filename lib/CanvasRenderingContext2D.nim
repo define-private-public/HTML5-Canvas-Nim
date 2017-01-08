@@ -112,8 +112,23 @@ proc getLineDash*(c: CanvasRenderingContext2D): seq[float] {.importcpp.}
 proc setLineDash*(
   c: CanvasRenderingContext2D;
   segments: seq[float]
-) {.importcpp.} 
+) {.importcpp.}
 
+
+# Gradients and Patterns
+proc createLinearGradient*(
+  c: CanvasRenderingContext2D;
+  x0, y0: float;
+  x1, y1: float;
+) {.importcpp.}
+
+proc createRadialGradient*(
+  c: CanvasRenderingContext2D;
+  x0, y0: float;
+  r0: float;
+  x1, y1: float;
+  r1: float
+) {.importcpp.}
 
 
 

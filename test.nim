@@ -77,7 +77,6 @@ proc lineTest()=
     canvas = dom.document.getElementById("line-canvas").Canvas
     ctx = canvas.getContext2D()
 
-
   ctx.lineWidth = 15
   ctx.lineCap = RoundCap
   ctx.lineJoin = RoundJoin
@@ -125,12 +124,20 @@ proc lineTest()=
   echo $ctx.getLineDash()
 
 
+# Gradient & Pattern Tests
+proc gradAndPattTest()=
+  let
+    canvas = dom.document.getElementById("grad-and-patt-canvas").Canvas
+    ctx = canvas.getContext2D()
+
+
 # The dom on load
 dom.window.onload = proc(e: dom.Event) =
   canvasTest()
   rectTest()
   textTest()
   lineTest()
+  gradAndPattTest()
 
   let
     canvas = dom.document.getElementById("render-area").Canvas
