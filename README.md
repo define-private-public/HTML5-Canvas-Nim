@@ -49,13 +49,13 @@ To Bind & Test.  Key: `b`=bound, `x`=bound & tested
  - [x] font
  - [x] textAlign
  - [x] textBaseline
- - [b] CanvasGradient
- - [b] addColorStop()
+ - [x] CanvasGradient
+ - [x] addColorStop()
  - [b] CanvasPattern
- - [ ] fillStyle
- - [ ] strokeStyle
- - [ ] createLinearGradient()
- - [ ] createRadialGraident()
+ - [b] fillStyle
+ - [b] strokeStyle
+ - [x] createLinearGradient()
+ - [x] createRadialGraident()
  - [ ] CanvasImageSource
  - [ ] createPattern()
  - [ ] shadowBlur

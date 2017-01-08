@@ -139,8 +139,20 @@ proc gradAndPattTest()=
   grad = ctx.createRadialGradient(70, 70, 20, 0, 0, 250)
   grad.addColorStop(1, "cyan")
   grad.addColorStop(0, "magenta")
-  ctx.fillStyle = grad
-  ctx.fillRect(80, 80, 100, 100)
+  ctx.strokeStyle = grad
+
+  ctx.beginPath()
+  ctx.lineJoin = RoundJoin
+  ctx.lineWidth = 7.5
+  ctx.moveTo(80, 80)
+  ctx.lineTo(180, 180)
+  ctx.lineTo(180, 80)
+  ctx.lineTo(80, 80)
+  ctx.lineTo(80, 180)
+  ctx.lineTo(180, 80)
+  ctx.moveTo(180, 180)
+  ctx.lineTo(80, 180)
+  ctx.stroke()
 
 
 # The dom on load

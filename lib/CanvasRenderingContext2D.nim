@@ -4,10 +4,6 @@
 type
   CanvasRenderingContext2D* = ref CanvasRenderingContext2DObj
   CanvasRenderingContext2DObj {.importc.} = object
-    # TODO what about gradients?  This looks like it only supports strings right now
-    strokeStyle*: cstring
-#    fillStyle*: cstring
-
     font*: cstring
     textAlign*: TextAlignment
     textBaseline*: TextBaseline
@@ -26,6 +22,7 @@ type
 
 # Since the 2D Context's `fillStyle` and `strokeStyle` can accept multiple types
 # the following six procs are needed to keep cohesion with the JS API.
+# fillStyle
 proc `fillStyle=`*(
   ctx: CanvasRenderingContext2D;
   color: cstring
@@ -44,6 +41,26 @@ proc `fillStyle=`*(
   pattern: CanvasPattern
 ) {.inline.} =
   {.emit: "`result` = `ctx`.fillStyle = `pattern`;".}
+
+# strokeStyle
+proc `strokeStyle=`*(
+  ctx: CanvasRenderingContext2D;
+  color: cstring
+) {.inline.} =
+  {.emit: "`result` = `ctx`.strokeStyle = `color`;".}
+
+proc `strokeStyle=`*(
+  ctx: CanvasRenderingContext2D;
+  gradient: CanvasGradient
+) {.inline.} =
+  {.emit: "`result` = `ctx`.strokeStyle = `gradient`;".}
+
+# TODO this needs testing
+proc `strokeStyle=`*(
+  ctx: CanvasRenderingContext2D;
+  pattern: CanvasPattern
+) {.inline.} =
+  {.emit: "`result` = `ctx`.strokeStyle = `pattern`;".}
 
 
 
