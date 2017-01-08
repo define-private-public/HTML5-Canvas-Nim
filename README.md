@@ -35,7 +35,7 @@ To Bind & Test.  Key: `b`=bound, `x`=bound & tested
  - [x] clearRect()
  - [x] fillRect()
  - [x] strokeRect()
- - [ ] TextMetrics
+ - [b] TextMetrics
  - [x] fillText()
  - [x] strokeText()
  - [ ] measureText()
