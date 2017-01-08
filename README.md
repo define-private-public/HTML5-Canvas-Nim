@@ -31,7 +31,7 @@ To Bind & Test.  Key: `b`=bound, `x`=bound & tested
  - [x] width 
  - [x] height
  - [x] toDataURL()
- - [x] getContext()
+ - [ ] getContext()  [Only a hard coded one for 2D exists, add a generic one too]
  - [x] clearRect()
  - [x] fillRect()
  - [x] strokeRect()
