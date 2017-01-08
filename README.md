@@ -49,6 +49,8 @@ To Bind & Test.  Key: `b`=bound, `x`=bound & tested
  - [x] font
  - [x] textAlign
  - [x] textBaseline
+ - [b] CanvasGradient
+ - [b] addColorStop()
  - [ ] fillStyle
  - [ ] strokeStyle
  - [ ] createLinearGradient()

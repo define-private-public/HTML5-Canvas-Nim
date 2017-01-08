@@ -3,6 +3,7 @@
 import dom
 include lib/rgb
 include lib/TextMetrics
+include lib/CanvasGradient
 include lib/Canvas
 include lib/CanvasRenderingContext2D
 
