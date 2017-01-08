@@ -26,7 +26,7 @@ TODO:
 
 
 To Bind & Test.  Key: `b`=bound, `x`=bound & tested
- - [b] rgb()
+ - [x] rgb()
  - [x] Canvas
  - [x] width 
  - [x] height
