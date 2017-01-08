@@ -136,7 +136,7 @@ proc gradAndPattTest()=
   ctx.fillStyle = grad
   ctx.fillRect(4, 4, 100, 100)
 
-  grad = ctx.createRadialGradient(70, 70, 20, 0, 0, 250)
+  grad = ctx.createRadialGradient(130, 130, 20, 110, 110, 80)
   grad.addColorStop(1, "cyan")
   grad.addColorStop(0, "magenta")
   ctx.strokeStyle = grad
