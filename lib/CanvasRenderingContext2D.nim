@@ -32,40 +32,40 @@ proc `fillStyle=`*(
   ctx: CanvasRenderingContext2D;
   color: cstring
 ) {.inline.} =
-  {.emit: "`result` = `ctx`.fillStyle = `color`;".}
+  {.emit: [ctx, ".fillStyle=", color, ";"].}
 
 proc `fillStyle=`*(
   ctx: CanvasRenderingContext2D;
   gradient: CanvasGradient
 ) {.inline.} =
-  {.emit: "`result` = `ctx`.fillStyle = `gradient`;".}
+  {.emit: [ctx, ".fillStyle=", gradient, ";"].}
 
 # TODO this needs testing
 proc `fillStyle=`*(
   ctx: CanvasRenderingContext2D;
   pattern: CanvasPattern
 ) {.inline.} =
-  {.emit: "`result` = `ctx`.fillStyle = `pattern`;".}
+  {.emit: [ctx, ".fillStyle=", pattern, ";"].}
 
 # strokeStyle
 proc `strokeStyle=`*(
   ctx: CanvasRenderingContext2D;
   color: cstring
 ) {.inline.} =
-  {.emit: "`result` = `ctx`.strokeStyle = `color`;".}
+  {.emit: [ctx, ".strokeStyle=", color, ";"].}
 
 proc `strokeStyle=`*(
   ctx: CanvasRenderingContext2D;
   gradient: CanvasGradient
 ) {.inline.} =
-  {.emit: "`result` = `ctx`.strokeStyle = `gradient`;".}
+  {.emit: [ctx, ".strokeStyle=", gradient, ";"].}
 
 # TODO this needs testing
 proc `strokeStyle=`*(
   ctx: CanvasRenderingContext2D;
   pattern: CanvasPattern
 ) {.inline.} =
-  {.emit: "`result` = `ctx`.strokeStyle = `pattern`;".}
+  {.emit: [ctx, ".strokeStyle=", pattern, ";"].}
 
 
 
