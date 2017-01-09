@@ -70,8 +70,8 @@ Key: `b`=bound, `x`=bound & tested
 [x] closePath()
 [x] moveTo()
 [x] lineTo()
-[b] bezierCurveTo()
-[b] quadraticCurveTo()
+[x] bezierCurveTo()
+[x] quadraticCurveTo()
 [b] arc()
 [b] arcTo()
 [b] ellipse()  [EXP]

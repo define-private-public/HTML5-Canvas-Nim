@@ -182,12 +182,20 @@ proc paths1Test()=
     ctx = canvas.getContext2D()
 
   ctx.lineWidth = 3
+  ctx.strokeStyle = rgb(30, 0, 100)
 
   ctx.beginPath()
-  ctx.moveto(8, 8)
+  ctx.moveTo(8, 8)
   ctx.lineTo(48, 8)
   ctx.lineTo(8, 48)
   ctx.closePath()
+  ctx.stroke()
+
+  ctx.strokeStyle = rgb(80, 0, 120)
+  ctx.beginPath()
+  ctx.moveTo(50, 50)
+  ctx.bezierCurveTo(0, 0, 150, 20, 75, 75)
+  ctx.quadraticCurveTo(-10, 150, 75, 175)
   ctx.stroke()
 
 
