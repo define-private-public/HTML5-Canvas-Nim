@@ -182,8 +182,8 @@ proc paths1Test()=
     ctx = canvas.getContext2D()
 
   ctx.lineWidth = 3
-  ctx.strokeStyle = rgb(30, 0, 100)
 
+  ctx.strokeStyle = rgb(30, 0, 100)
   ctx.beginPath()
   ctx.moveTo(8, 8)
   ctx.lineTo(48, 8)
@@ -196,8 +196,22 @@ proc paths1Test()=
   ctx.moveTo(50, 50)
   ctx.bezierCurveTo(0, 0, 150, 20, 75, 75)
   ctx.quadraticCurveTo(-10, 150, 75, 175)
+  ctx.arcTo(75, 100, 105, 110, 55)
+  ctx.stroke()
+  ctx.closePath()
+
+  ctx.strokeStyle = rgb(130, 20, 200)
+  ctx.beginPath()
+  ctx.moveto(100, 100)
+  ctx.rect(105, 15, 85, 85)
+  ctx.arc(145, 55, 35, 0.3 * Pi, 1.8 * Pi)
+  ctx.closePath()
   ctx.stroke()
 
+  ctx.strokeStyle = rgb(255, 0, 200)
+  ctx.beginPath()
+  ctx.ellipse(150, 170, 20, 35, -105 * Pi / 180, 0, 1.5 * Pi)
+  ctx.stroke()
 
 
 # The dom on load
@@ -210,12 +224,4 @@ dom.window.onload = proc(e: dom.Event) =
   shadowTest()
   paths1Test()
 
-  let
-    canvas = dom.document.getElementById("render-area").Canvas
-    ctx = canvas.getContext2D()
-
-  ctx.strokeStyle = rgb(255, 0, 200)
-  ctx.beginPath()
-  ctx.ellipse(100, 100, 50, 75, 45 * Pi / 180, 0, 1.5 * Pi)
-  ctx.stroke()
 

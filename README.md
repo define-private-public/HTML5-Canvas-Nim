@@ -72,10 +72,10 @@ Key: `b`=bound, `x`=bound & tested
 [x] lineTo()
 [x] bezierCurveTo()
 [x] quadraticCurveTo()
-[b] arc()
-[b] arcTo()
-[b] ellipse()  [EXP]
-[b] rect()
+[x] arc()
+[x] arcTo()
+[x] ellipse()  [EXP]
+[x] rect()
 [ ] fill()
 [ ] stroke()
 [ ] clip()
