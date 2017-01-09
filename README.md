@@ -66,10 +66,10 @@ Key: `b`=bound, `x`=bound & tested
 [x] shadowColor
 [x] shadowOffsetX
 [x] shadowOffsetY
-[b] beginPath()
-[b] closePath()
-[b] moveTo()
-[b] lineTo()
+[x] beginPath()
+[x] closePath()
+[x] moveTo()
+[x] lineTo()
 [b] bezierCurveTo()
 [b] quadraticCurveTo()
 [b] arc()

@@ -176,6 +176,21 @@ proc shadowTest()=
   ctx.fillRect(100, 100, 80, 50)
 
 
+proc paths1Test()=
+  let
+    canvas = dom.document.getElementById("paths-1-canvas").Canvas
+    ctx = canvas.getContext2D()
+
+  ctx.lineWidth = 3
+
+  ctx.beginPath()
+  ctx.moveto(8, 8)
+  ctx.lineTo(48, 8)
+  ctx.lineTo(8, 48)
+  ctx.closePath()
+  ctx.stroke()
+
+
 
 # The dom on load
 dom.window.onload = proc(e: dom.Event) =
@@ -185,6 +200,7 @@ dom.window.onload = proc(e: dom.Event) =
   lineTest()
   gradAndPattTest()
   shadowTest()
+  paths1Test()
 
   let
     canvas = dom.document.getElementById("render-area").Canvas
