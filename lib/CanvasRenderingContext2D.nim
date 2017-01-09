@@ -177,17 +177,50 @@ proc createRadialGradient*(
 ): CanvasGradient {.importcpp.}
 
 
-
-
-
+# Path manipulation
 proc beginPath*(c: CanvasRenderingContext2D) {.importcpp.}
 
-proc stroke*(c: CanvasRenderingContext2D) {.importcpp.}
+proc closePath*(c: CanvasRenderingContext2D) {.importcpp.}
 
-proc moveTo*(c: CanvasRenderingContext2D; x, y: float) {.importcpp.}
+proc moveTo*(
+  c: CanvasRenderingContext2D;
+  x, y: float
+) {.importcpp.}
 
-proc lineTo*(c: CanvasRenderingContext2D; x, y: float) {.importcpp.}
+proc lineTo*(
+  c: CanvasRenderingContext2D;
+  x, y: float
+) {.importcpp.}
 
+proc bezierCurveTo*(
+  c: CanvasRenderingContext2D;
+  cp1x, cp1y: float;
+  cp2x, cp2y: float;
+  x, y: float
+) {.importcpp.}
+
+proc quadraticCurveTo*(
+  c: CanvasRenderingContext2D;
+  cpx, cpy: float;
+  x, y: float
+) {.importcpp.}
+
+proc arc*(
+  c: CanvasRenderingContext2D;
+  x, y: float;
+  radius: float;
+  startAngle, endAngle: float;
+  anticlockwise: bool = false
+) {.importcpp.}
+
+proc arcTo*(
+  c: CanvasRenderingContext2D;
+  x1, y1: float;
+  x2, y2: float;
+  radius: float;
+) {.importcpp.}
+
+# Note: this function works in Edge but not IE
 proc ellipse*(
   c: CanvasRenderingContext2D;
   x, y: float;
@@ -196,4 +229,17 @@ proc ellipse*(
   startAngle, endAngle: float;
   anticlockwise: bool = false
 ) {.importcpp.}
+
+proc rect*(
+  c: CanvasRenderingContext2D;
+  x, y: float;
+  width, height: float;
+) {.importcpp.}
+
+
+
+
+proc stroke*(c: CanvasRenderingContext2D) {.importcpp.}
+
+
 
