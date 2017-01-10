@@ -432,7 +432,36 @@ proc drawImage*(
 ) {.importcpp.}
 
 
-# TODO Pixel manipulation
+# Pixel manipulation
+proc createImageData*(
+  ctx: CanvasRenderingContext2D;
+  width, height: int;
+): ImageData {.importcpp.}
+
+proc createImageData*(
+  ctx: CanvasRenderingContext2D;
+  imagedata: ImageData
+): ImageData {.importcpp.}
+
+proc getImageData*(
+  ctx: CanvasRenderingContext2D;
+  sx, sy: float;
+  sw, sh: float;
+): ImageData {.importcpp.}
+
+proc putImageData*(
+  ctx: CanvasRenderingContext2D;
+  imagedata: ImageData;
+  dx, dy: float;
+): ImageData {.importcpp.}
+
+proc putImageData*(
+  ctx: CanvasRenderingContext2D;
+  imagedata: ImageData;
+  dx, dy: float;
+  dirtyX, dirtyY: float;
+  dirtyWidth, dirtyHeight: float;
+): ImageData {.importcpp.}
 
 
 # Canvas State

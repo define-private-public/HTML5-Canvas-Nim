@@ -1,7 +1,6 @@
 # Contains the ImageData bindings
 
 
-# TODO fields need testing
 type
   ImageData* = ref ImageDataObj
   ImageDataObj {.importc.} = object
@@ -11,3 +10,4 @@ type
     
 
 # Note: Constructor is not added in because it's not supported in IE
+

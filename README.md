@@ -95,9 +95,9 @@ Key: `b`=bound, `x`=bound & tested
 [x] globalCompositeOperation
 [x] drawImage()
 [b] ImageData
-[ ] createImageData()
-[ ] getImageData()
-[ ] putImageData()
+[b] createImageData()
+[b] getImageData()
+[b] putImageData()
 [x] save()
 [x] restore()
 [x] canvas
