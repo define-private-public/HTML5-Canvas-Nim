@@ -18,6 +18,43 @@ proc canvasTest()=
   echo $canvas.toDataURL()
 
 
+proc dataTest()=
+  let
+    canvas = dom.document.getElementById("data-canvas").Canvas
+    ctx = canvas.getContext2D()
+
+  ctx.translate(0.5, 0.5)
+  ctx.lineWidth = 1
+
+  ctx.strokeStyle = rgb(255, 0, 0)
+  ctx.beginPath()
+  ctx.moveTo(0, 0)
+  ctx.lineTo(0, 2)
+  ctx.closePath()
+  ctx.stroke()
+
+  ctx.strokeStyle = rgb(0, 255, 0)
+  ctx.beginPath()
+  ctx.moveTo(1, 0)
+  ctx.lineTo(1, 2)
+  ctx.closePath()
+  ctx.stroke()
+
+  ctx.strokeStyle = rgb(0, 0, 255)
+  ctx.beginPath()
+  ctx.moveTo(2, 0)
+  ctx.lineTo(2, 2)
+  ctx.closePath()
+  ctx.stroke()
+
+  echo "The data below \"didn't happen.\"  Catch my drift?"
+  let imgData = ctx.getImageData(0, 0, 3, 3)
+  echo imgData.width, "x", imgData.height, " byte-size:", imgData.data.len
+
+  # Paste it over
+  ctx.putImagedata(imgData, 3, 0)
+
+
 # Rectangle functions
 proc rectTest()=
   let
@@ -132,6 +169,7 @@ proc gradAndPattTest()=
     ctx = canvas.getContext2D()
     pattern1 = dom.document.getElementById("pattern").ImageElement
     pattern2 = dom.document.getElementById("text-canvas").Canvas
+#    pattern3 = dom.document.getElementById("data-canvas").Canvas.getContext2D().getImageData(0, 0, 3, 3)
 
   var grad = ctx.createLinearGradient(0, 0, 80, 20)
   grad.addColorStop(0, "green")
@@ -406,11 +444,13 @@ proc stateTest()=
   echo "Testing to see if a Canvas matches, look the other way:"
   echo "same:", (canvas == ctx.canvas)
 
+
   
 
 # The dom on load
 dom.window.onload = proc(e: dom.Event) =
   canvasTest()
+  dataTest()
   rectTest()
   textTest()
   lineTest()

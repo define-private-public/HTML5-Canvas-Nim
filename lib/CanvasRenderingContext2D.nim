@@ -453,7 +453,7 @@ proc putImageData*(
   ctx: CanvasRenderingContext2D;
   imagedata: ImageData;
   dx, dy: float;
-): ImageData {.importcpp.}
+) {.importcpp.}
 
 proc putImageData*(
   ctx: CanvasRenderingContext2D;
@@ -461,7 +461,7 @@ proc putImageData*(
   dx, dy: float;
   dirtyX, dirtyY: float;
   dirtyWidth, dirtyHeight: float;
-): ImageData {.importcpp.}
+) {.importcpp.}
 
 
 # Canvas State

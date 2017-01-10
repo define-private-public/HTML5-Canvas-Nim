@@ -94,10 +94,10 @@ Key: `b`=bound, `x`=bound & tested
 [x] globalAlpha
 [x] globalCompositeOperation
 [x] drawImage()
-[b] ImageData
-[b] createImageData()
-[b] getImageData()
-[b] putImageData()
+[x] ImageData
+[x] createImageData()
+[x] getImageData()
+[x] putImageData()
 [x] save()
 [x] restore()
 [x] canvas
