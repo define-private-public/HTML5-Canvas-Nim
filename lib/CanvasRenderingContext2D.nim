@@ -276,3 +276,42 @@ proc isPointInStroke*(
   x, y: float
 ): bool {.importcpp.}
 
+
+# Transformations
+proc rotate*(
+  c: CanvasRenderingContext2D;
+  angle: float
+) {.importcpp.}
+
+proc scale*(
+  c: CanvasRenderingContext2D;
+  x, y: float
+) {.importcpp.}
+
+proc translate*(
+  c: CanvasRenderingContext2D;
+  x, y: float
+) {.importcpp.}
+
+proc transform*(
+  c: CanvasRenderingContext2D;
+  a: float;   # Horizontal scaling
+  b: float;   # Horizontal skewing
+  c: float;   # Vertical skewing
+  d: float;   # Vertical scaling
+  e: float;   # Horizontal moving
+  f: float    # Vertical moving
+) {.importcpp.}
+
+proc setTransform*(
+  c: CanvasRenderingContext2D;
+  a: float;   # Horizontal scaling
+  b: float;   # Horizontal skewing
+  c: float;   # Vertical skewing
+  d: float;   # Vertical scaling
+  e: float;   # Horizontal moving
+  f: float    # Vertical moving
+) {.importcpp.}
+
+
+

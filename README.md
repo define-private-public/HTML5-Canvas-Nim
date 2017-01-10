@@ -82,14 +82,11 @@ Key: `b`=bound, `x`=bound & tested
 [x] clip()
 [x] isPointInPath()
 [x] isPointInStroke()
-[ ] currentTransform
-[ ] rotate()
-[ ] scale()
-[ ] translate()
-[ ] transform()
-[ ] setTransform()
-[ ] resetTransform()
-[ ] SVGMatrix
+[b] rotate()
+[b] scale()
+[b] translate()
+[b] transform()
+[b] setTransform()
 [ ] globalAlpha
 [ ] globalCompositeOperation
 [ ] drawImage()
@@ -97,13 +94,9 @@ Key: `b`=bound, `x`=bound & tested
 [ ] createImageData()
 [ ] getImageData()
 [ ] putImageData()
-[ ] imageSmoothingEnabled  [EXP]
 [ ] save()
-[ ] restore
+[ ] restore()
 [ ] canvas
-[ ] addHitRegion()  [EXP]
-[ ] removeHitRegion()  [EXP]
-[ ] clearHitRegions()  [EXP]
 
 
 Extra:
