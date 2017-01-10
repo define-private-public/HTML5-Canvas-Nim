@@ -162,7 +162,7 @@ proc shadowTest()=
     canvas = dom.document.getElementById("shadow-canvas").Canvas
     ctx = canvas.getContext2D()
 
-  ctx.fillStyle = rgb(0, 0, 0)
+  ctx.fillStyle = rgb(25, 35, 50)
   ctx.fillRect(0, 0, canvas.width.float, canvas.height.float)
 
   ctx.shadowColor = "red"
@@ -338,8 +338,15 @@ proc imagesTest()=
   let
     canvas = dom.document.getElementById("images-canvas").Canvas
     ctx = canvas.getContext2D()
+    kevin = dom.document.getElementbyId("kevin-bacon").ImageElement
 
+  ctx.fillStyle = "black"
+  ctx.fillRect(0, 0, 200, 200)
 
+  # He deserives a holy glow around him
+  ctx.shadowColor = "yellow"
+  ctx.shadowBlur = 25
+  ctx.drawImage(kevin, 35, 10)
   
 
   
