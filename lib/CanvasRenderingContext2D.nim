@@ -23,6 +23,7 @@ type
   TextBaseline* = distinct cstring 
   LineCap* = distinct cstring
   LineJoin* = distinct cstring
+  FillRule* = distinct cstring
 
 
 # Since the 2D Context's `fillStyle` and `strokeStyle` can accept multiple types
@@ -87,15 +88,20 @@ const
 
   # TODO figure out a way to drop the "Cap," and "Join," portions of these.
   #      The problem is that plain old "Round," would conflict
-  #LineCap
+  # LineCap
   ButtCap* = "butt".LineCap
   RoundCap* = "round".LineCap
   SquareCap* = "square".LineCap
   
-  #LineJoin
+  # LineJoin
   RoundJoin* = "round".LineJoin
   BevelJoin* = "bevel".LineJoin
   MiterJoin* = "miter".LineJoin
+
+  # FillRule
+  NonZero = "nonzero".FillRule
+  EvenOdd = "evenodd".FillRule
+
     
 
 
@@ -237,7 +243,13 @@ proc rect*(
 ) {.importcpp.}
 
 
+# Path drawing
+proc fill*(c: CanvasRenderingContext2D) {.importcpp.}
 
+proc fill*(
+  c: CanvasRenderingContext2D;
+  fillRule: cstring
+) {.importcpp.}
 
 proc stroke*(c: CanvasRenderingContext2D) {.importcpp.}
 

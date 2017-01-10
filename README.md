@@ -76,8 +76,8 @@ Key: `b`=bound, `x`=bound & tested
 [x] arcTo()
 [x] ellipse()  [EXP]
 [x] rect()
-[ ] fill()
-[ ] stroke()
+[b] fill()
+[b] stroke()
 [ ] clip()
 [ ] isPointInPath()
 [ ] isPointInStroke()
