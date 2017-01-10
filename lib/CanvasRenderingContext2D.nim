@@ -31,6 +31,7 @@ type
   LineJoin* = distinct cstring
   FillRule* = distinct cstring
   CompositeOperation* = distinct cstring
+  Repetition* = distinct cstring
 
 
 # Since the 2D Context's `fillStyle` and `strokeStyle` can accept multiple types
@@ -137,6 +138,12 @@ const
   Color* = "color".CompositeOperation
   Luminosity* = "luminosity".CompositeOperation
 
+  # Repetition
+  Repeat* = "repeat".Repetition
+  RepeatX* = "repeat-x".Repetition
+  RepeatY* = "repeat-y".Repetition
+  NoRepeat* = "no-repeat".Repetition
+
 
 
 
@@ -216,6 +223,34 @@ proc createRadialGradient*(
   x1, y1: float;
   r1: float
 ): CanvasGradient {.importcpp.}
+
+# TODO test
+proc createPattern*(
+  ctx: CanvasRenderingContext2D;
+  image: ImageElement;
+  repetition: Repetition
+): CanvasPattern {.importcpp.}
+
+# TODO test
+proc createPattern*(
+  ctx: CanvasRenderingContext2D;
+  image: Canvas;
+  repetition: Repetition
+): CanvasPattern {.importcpp.}
+
+# TODO test
+proc createPattern*(
+  ctx: CanvasRenderingContext2D;
+  image: CanvasRenderingContext2D;
+  repetition: Repetition
+): CanvasPattern {.importcpp.}
+
+# TODO test
+proc createPattern*(
+  ctx: CanvasRenderingContext2D;
+  image: ImageData;
+  repetition: Repetition
+): CanvasPattern {.importcpp.}
 
 
 # Path manipulation
