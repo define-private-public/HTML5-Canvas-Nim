@@ -56,7 +56,7 @@ proc textTest()=
   ctx.strokeStyle = "white"
   ctx.strokeText(msg1, 10, 10)
 
-  echo "This is only some TextMetrics info code, pay no mind:"
+  echo "This is only some TextMetrics info code, pay no attention:"
   echo ctx.measureText(msg1).width;
 
   ctx.font = "24px Arial"
