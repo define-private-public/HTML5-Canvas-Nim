@@ -334,7 +334,7 @@ proc compositingTest()=
   ctx.strokeRect(35, 35, 150, 150)
 
 
-proc imagesTest()=
+proc imageDraw1Test()=
   let
     canvas = dom.document.getElementById("image-drawing-1-canvas").Canvas
     ctx = canvas.getContext2D()
@@ -347,8 +347,19 @@ proc imagesTest()=
   ctx.shadowColor = "yellow"
   ctx.shadowBlur = 25
   ctx.drawImage(kevin, 35, 10)
-  
+ 
 
+proc imageDraw2Test()=
+  let
+    canvas = dom.document.getElementById("image-drawing-2-canvas").Canvas
+    ctx = canvas.getContext2D()
+
+    # Get some canvas to source from
+    src1 = dom.document.getElementById("line-canvas").Canvas
+    src2 = dom.document.getElementById("grad-and-patt-canvas").Canvas
+
+  ctx.drawImage(src1, 0, 0, 100, 200)
+  ctx.drawImage(src2, 65, 65, 40, 60, 100, 0, 100, 200)
   
 
 
@@ -364,5 +375,6 @@ dom.window.onload = proc(e: dom.Event) =
   paths2Test()
   transformsTest()
   compositingTest()
-  imagesTest()
+  imageDraw1Test()
+  imageDraw2Test()
 

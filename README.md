@@ -22,6 +22,7 @@ TODO:
    - There are `distinct` types for things (list them)
    - `resetTransform()` is actually emulated instead of being the real function call
    - Not all of the compositing operations are tested
+   - drawImage() only uses <image> and <canvas> as sources right now
    - Some fonts might render differently in differnt browsers (e.g. Serif 48px in Chrome vs. Firefox)
  - [x] List of functions/properties to bind (https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D)
  - [ ] some examples/tests
@@ -92,7 +93,7 @@ Key: `b`=bound, `x`=bound & tested
 [x] setTransform()
 [x] globalAlpha
 [x] globalCompositeOperation
-[ ] drawImage()
+[x] drawImage()
 [b] ImageData
 [ ] createImageData()
 [ ] getImageData()
