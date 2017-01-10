@@ -248,10 +248,31 @@ proc fill*(c: CanvasRenderingContext2D) {.importcpp.}
 
 proc fill*(
   c: CanvasRenderingContext2D;
-  fillRule: cstring
+  fillRule: FillRule
 ) {.importcpp.}
 
 proc stroke*(c: CanvasRenderingContext2D) {.importcpp.}
 
+proc clip*(c: CanvasRenderingContext2D) {.importcpp.}
 
+proc clip*(
+  c: CanvasRenderingContext2D;
+  fillRule: FillRule
+) {.importcpp.}
+
+proc isPointInPath*(
+  c: CanvasRenderingContext2D;
+  x, y: float
+): bool {.importcpp.}
+
+proc isPointInPath*(
+  c: CanvasRenderingContext2D;
+  x, y: float;
+  fillRule: FillRule
+): bool {.importcpp.}
+
+proc isPointInStroke*(
+  c: CanvasRenderingContext2D;
+  x, y: float
+): bool {.importcpp.}
 

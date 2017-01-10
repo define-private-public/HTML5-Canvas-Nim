@@ -19,6 +19,7 @@ TODO:
    - Most experimental things aren't included, unless is has major support (see above)
    - For CanvasImageSource, <video> & Blob are not currently supported
    - ellipse() is here, but note it's supported in Edge but not IE
+   - There are `distinct` types for things (list them)
  - [x] List of functions/properties to bind (https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D)
  - [ ] some examples/tests
  - [x] GitHub mirror
@@ -78,9 +79,9 @@ Key: `b`=bound, `x`=bound & tested
 [x] rect()
 [b] fill()
 [b] stroke()
-[ ] clip()
-[ ] isPointInPath()
-[ ] isPointInStroke()
+[b] clip()
+[b] isPointInPath()
+[b] isPointInStroke()
 [ ] currentTransform
 [ ] rotate()
 [ ] scale()

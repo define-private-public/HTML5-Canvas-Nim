@@ -216,6 +216,14 @@ proc paths1Test()=
   ctx.stroke()
 
 
+proc paths2Test()=
+  let
+    canvas = dom.document.getElementById("paths-2-canvas").Canvas
+    ctx = canvas.getContext2D()
+
+
+
+
 # The dom on load
 dom.window.onload = proc(e: dom.Event) =
   canvasTest()
@@ -225,5 +233,5 @@ dom.window.onload = proc(e: dom.Event) =
   gradAndPattTest()
   shadowTest()
   paths1Test()
-
+  paths2Test()
 
