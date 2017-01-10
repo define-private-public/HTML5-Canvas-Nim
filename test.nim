@@ -309,7 +309,29 @@ proc compositingTest()=
     canvas = dom.document.getElementById("compositing-canvas").Canvas
     ctx = canvas.getContext2D()
 
-   
+  # Alpha blending
+  ctx.fillStyle = rgb(0, 100, 200)
+  var
+    a = 1.0
+    y = 10.0
+  for x in countup(10, 200, 10):
+    ctx.globalAlpha = a
+    ctx.fillRect(x.float, y, 40, 40)
+    
+    a -= 0.05
+    y += 7.5
+
+  ctx.globalAlpha = 0.8
+  ctx.globalCompositeOperation = SourceAtop
+  ctx.fillStyle = rgb(250, 10, 65)
+
+  ctx.arc(140, 140, 100, 0, 2 * Pi)
+  ctx.fill()
+
+  ctx.lineJoin = BevelJoin
+  ctx.strokeStyle = rgb(50, 245, 65)
+  ctx.lineWidth = 15
+  ctx.strokeRect(35, 35, 150, 150)
 
   
 

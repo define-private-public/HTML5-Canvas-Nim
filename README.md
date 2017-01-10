@@ -89,8 +89,8 @@ Key: `b`=bound, `x`=bound & tested
 [x] translate()
 [x] transform()
 [x] setTransform()
-[b] globalAlpha
-[b] globalCompositeOperation
+[x] globalAlpha
+[x] globalCompositeOperation
 [ ] drawImage()
 [b] ImageData
 [ ] createImageData()

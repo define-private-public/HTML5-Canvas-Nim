@@ -20,6 +20,7 @@ type
     shadowOffsetY*: float
 
     globalAlpha*: float
+    globalCompositeOperation*: CompositeOperation
 
   TextAlignment* = distinct cstring
   TextBaseline* = distinct cstring 
