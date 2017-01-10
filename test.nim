@@ -333,6 +333,15 @@ proc compositingTest()=
   ctx.lineWidth = 15
   ctx.strokeRect(35, 35, 150, 150)
 
+
+proc imagesTest()=
+  let
+    canvas = dom.document.getElementById("images-canvas").Canvas
+    ctx = canvas.getContext2D()
+
+
+  
+
   
 
 
@@ -348,4 +357,5 @@ dom.window.onload = proc(e: dom.Event) =
   paths2Test()
   transformsTest()
   compositingTest()
+  imagesTest()
 
