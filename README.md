@@ -20,6 +20,7 @@ TODO:
    - For CanvasImageSource, <video> & Blob are not currently supported
    - ellipse() is here, but note it's supported in Edge but not IE
    - There are `distinct` types for things (list them)
+   - `resetTransform()` is actually emulated instead of being the real function call
  - [x] List of functions/properties to bind (https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D)
  - [ ] some examples/tests
  - [x] GitHub mirror
@@ -82,11 +83,11 @@ Key: `b`=bound, `x`=bound & tested
 [x] clip()
 [x] isPointInPath()
 [x] isPointInStroke()
-[b] rotate()
-[b] scale()
-[b] translate()
-[b] transform()
-[b] setTransform()
+[x] rotate()
+[x] scale()
+[x] translate()
+[x] transform()
+[x] setTransform()
 [ ] globalAlpha
 [ ] globalCompositeOperation
 [ ] drawImage()

@@ -313,5 +313,9 @@ proc setTransform*(
   f: float    # Vertical moving
 ) {.importcpp.}
 
-
+# Note: the native function doesn't work in IE, Opera, or Safari, but it can be
+#       emulated by calling setTransform() with an identity matrix
+proc resetTransform*(ctx: CanvasRenderingContext2D) {.inline.} =
+  ctx.setTransform(1, 0, 0, 1, 0, 0)
+  
 

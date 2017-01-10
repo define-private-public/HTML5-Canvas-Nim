@@ -12,8 +12,7 @@ include lib/CanvasRenderingContext2D
 
 # The combinded functions go here:
 
-
+# Context grabbing
 proc getContext2D*(c: Canvas): CanvasRenderingContext2D {.inline.} =
   {.emit: [result, "=", c, ".getContext('2d');"].}
-
 

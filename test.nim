@@ -276,6 +276,36 @@ proc paths2Test()=
   echo ctx.isPointInPath(20, 180, NonZero)
 
 
+proc transformsTest*()=
+  let
+    canvas = dom.document.getElementById("transforms-canvas").Canvas
+    ctx = canvas.getContext2D()
+
+  ctx.strokeStyle = rgb(200, 20, 0)
+  ctx.lineWidth = 3
+  ctx.rotate(15.0 * Pi / 180.0)
+  ctx.strokeRect(4, 4, 125, 35)
+
+  ctx.setTransform(1, 0, 0, 1, 0, 0)    # Reset to identity matrix
+  ctx.scale(1.5, 0.5)
+  ctx.beginPath()
+  ctx.fillStyle = rgb(200, 100, 10)
+  ctx.arc(100, 50, 20, 0, 2 * Pi)
+  ctx.fill()
+
+  ctx.resetTransform()      # Reset to identity matrix
+  ctx.lineWidth = 1
+  ctx.strokeStyle = rgb(30, 200, 70)
+  ctx.translate(0.5, 0.5)   # Pixel aligned drawing!
+  ctx.strokeRect(25, 125, 50, 40)
+
+  ctx.transform(1, 0.5, 0.7, 1, 0, 0);    # A skew matrix
+  ctx.fillStyle = rgb(100, 230, 20)
+  ctx.fillRect(75, 75, 30, 60)
+
+  
+
+
 # The dom on load
 dom.window.onload = proc(e: dom.Event) =
   canvasTest()
@@ -286,4 +316,5 @@ dom.window.onload = proc(e: dom.Event) =
   shadowTest()
   paths1Test()
   paths2Test()
+  transformsTest()
 
