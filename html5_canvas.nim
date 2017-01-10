@@ -1,5 +1,10 @@
 # TODO header
 
+
+when not defined(js) and not defined(Nimdoc):
+  {.error: "This module only works for the JavaScript target.".}
+
+
 import dom
 include lib/rgb
 include lib/ImageData

@@ -130,6 +130,8 @@ proc gradAndPattTest()=
   let
     canvas = dom.document.getElementById("grad-and-patt-canvas").Canvas
     ctx = canvas.getContext2D()
+    pattern1 = dom.document.getElementById("pattern").ImageElement
+    pattern2 = dom.document.getElementById("text-canvas").Canvas
 
   var grad = ctx.createLinearGradient(0, 0, 80, 20)
   grad.addColorStop(0, "green")
@@ -155,6 +157,24 @@ proc gradAndPattTest()=
   ctx.moveTo(180, 180)
   ctx.lineTo(80, 180)
   ctx.stroke()
+
+  ctx.fillStyle = ctx.createPattern(pattern1, Repeat)
+  ctx.beginPath()
+  ctx.moveTo(10, 55)
+  ctx.lineTo(65, 115)
+  ctx.lineTo(20, 180)
+  ctx.closePath()
+  ctx.fill()
+
+  ctx.strokeStyle = ctx.createPattern(pattern2, RepeatY)
+  ctx.lineWidth = 10
+  ctx.beginPath()
+  ctx.moveTo(150, 10)
+  ctx.lineTo(200, 0)
+  ctx.lineTo(90, 90)
+  ctx.closePath()
+  ctx.stroke()
+
 
 
 proc shadowTest()=
@@ -204,7 +224,7 @@ proc paths1Test()=
 
   ctx.strokeStyle = rgb(130, 20, 200)
   ctx.beginPath()
-  ctx.moveto(100, 100)
+  ctx.moveTo(100, 100)
   ctx.rect(105, 15, 85, 85)
   ctx.arc(145, 55, 35, 0.3 * Pi, 1.8 * Pi)
   ctx.closePath()
@@ -249,7 +269,7 @@ proc paths2Test()=
 
   # Fill draw (NonZero)
   ctx.fillStyle = rgb(50, 0, 200)
-  ctx.moveto(points[0].x + 150, points[0].y + 50)
+  ctx.moveTo(points[0].x + 150, points[0].y + 50)
   ctx.beginPath()
   for i in 1..high(points):
     ctx.lineTo(points[i].x + 150, points[i].y + 50)
@@ -258,7 +278,7 @@ proc paths2Test()=
 
   # Fill draw (EvenOdd)
   ctx.fillStyle = rgb(200, 0, 200)
-  ctx.moveto(points[0].x + 150, points[0].y + 150)
+  ctx.moveTo(points[0].x + 150, points[0].y + 150)
   ctx.beginPath()
   for i in 1..high(points):
     ctx.lineTo(points[i].x + 150, points[i].y + 150)

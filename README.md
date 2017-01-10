@@ -61,12 +61,12 @@ Key: `b`=bound, `x`=bound & tested
 [x] textBaseline
 [x] CanvasGradient
 [x] addColorStop()
-[b] CanvasPattern
-[b] fillStyle   [There's a set, but what about get?]
-[b] strokeStyle [See above]
+[x] CanvasPattern
+[x] fillStyle   [There's a set, but what about get?]
+[x] strokeStyle [See above]
 [x] createLinearGradient()
 [x] createRadialGraident()
-[ ] createPattern()
+[x] createPattern()
 [x] shadowBlur
 [x] shadowColor
 [x] shadowOffsetX

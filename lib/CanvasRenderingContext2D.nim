@@ -49,7 +49,6 @@ proc `fillStyle=`*(
 ) {.inline.} =
   {.emit: [ctx, ".fillStyle=", gradient, ";"].}
 
-# TODO this needs testing
 proc `fillStyle=`*(
   ctx: CanvasRenderingContext2D;
   pattern: CanvasPattern
@@ -69,7 +68,6 @@ proc `strokeStyle=`*(
 ) {.inline.} =
   {.emit: [ctx, ".strokeStyle=", gradient, ";"].}
 
-# TODO this needs testing
 proc `strokeStyle=`*(
   ctx: CanvasRenderingContext2D;
   pattern: CanvasPattern
@@ -224,21 +222,18 @@ proc createRadialGradient*(
   r1: float
 ): CanvasGradient {.importcpp.}
 
-# TODO test
 proc createPattern*(
   ctx: CanvasRenderingContext2D;
   image: ImageElement;
   repetition: Repetition
 ): CanvasPattern {.importcpp.}
 
-# TODO test
 proc createPattern*(
   ctx: CanvasRenderingContext2D;
   image: Canvas;
   repetition: Repetition
 ): CanvasPattern {.importcpp.}
 
-# TODO test
 proc createPattern*(
   ctx: CanvasRenderingContext2D;
   image: CanvasRenderingContext2D;
