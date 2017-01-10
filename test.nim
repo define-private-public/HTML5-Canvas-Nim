@@ -1,5 +1,5 @@
 import dom
-from math import Pi
+from math import Pi, sqrt
 import html5_canvas
 
 
@@ -103,10 +103,12 @@ proc lineTest()=
   ctx.lineJoin = MiterJoin
   ctx.lineWidth = 5
   ctx.beginPath()
-  ctx.moveTo(20, 150)
-  for x in countup(30, 180, 15):
-    let y = if x mod 10 == 0: 100 else: 150
-    ctx.lineTo(x.float, y.float)
+  ctx.moveTo(4, 150)
+  for ix in countup(30, 210, 15):
+    let
+      x = ix.float - (3 * sqrt(ix.float))
+      y = if ix mod 10 == 0: 100 else: 150
+    ctx.lineTo(x, y.float)
   ctx.stroke()
 
   ctx.miterLimit = 10
@@ -116,7 +118,7 @@ proc lineTest()=
   ctx.lineWidth = 2.5
   ctx.beginPath()
   ctx.moveTo(20, 180)
-  ctx.lineTo(180, 180)
+  ctx.lineTo(180, 160)
   ctx.stroke()
 
   echo "This is only a test for getting dash values, please ignore:"
