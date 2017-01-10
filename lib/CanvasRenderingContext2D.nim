@@ -19,11 +19,14 @@ type
     shadowOffsetX*: float
     shadowOffsetY*: float
 
+    globalAlpha*: float
+
   TextAlignment* = distinct cstring
   TextBaseline* = distinct cstring 
   LineCap* = distinct cstring
   LineJoin* = distinct cstring
   FillRule* = distinct cstring
+  CompositeOperation* = distinct cstring
 
 
 # Since the 2D Context's `fillStyle` and `strokeStyle` can accept multiple types
@@ -102,7 +105,35 @@ const
   NonZero* = "nonzero".FillRule
   EvenOdd* = "evenodd".FillRule
 
-    
+  # CompositeOperation
+  SourceOver* = "source-over".CompositeOperation
+  SourceIn* = "source-in".CompositeOperation
+  SourceOut* = "source-out".CompositeOperation
+  SourceAtop* = "source-atop".CompositeOperation
+  DestinationOver* = "destination-over".CompositeOperation
+  DestinationIn* = "destination-in".CompositeOperation
+  DestinationOut* = "destination-out".CompositeOperation
+  DestinationAtop* = "destination-atop".CompositeOperation
+  Lighter* = "lighter".CompositeOperation
+  Copy* = "copy".CompositeOperation
+  XOR* = "xor".CompositeOperation
+  Multiply* = "multiply".CompositeOperation
+  Screen* = "screen".CompositeOperation
+  Overlay* = "overlay".CompositeOperation
+  Darken* = "darker".CompositeOperation
+  Lighten* = "lighten".CompositeOperation
+  ColorDodge* = "color-dodge".CompositeOperation
+  ColorBurn* = "color-burn".CompositeOperation
+  HardLight* = "hard-light".CompositeOperation
+  SoftLight* = "soft-light".CompositeOperation
+  Difference* = "difference".CompositeOperation
+  Exclusion* = "exculsion".CompositeOperation
+  Hue* = "hue".CompositeOperation
+  Saturation* = "saturation".CompositeOperation
+  Color* = "color".CompositeOperation
+  Luminosity* = "luminosity".CompositeOperation
+
+
 
 
 # Rectangle functions

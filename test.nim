@@ -276,7 +276,7 @@ proc paths2Test()=
   echo ctx.isPointInPath(20, 180, NonZero)
 
 
-proc transformsTest*()=
+proc transformsTest()=
   let
     canvas = dom.document.getElementById("transforms-canvas").Canvas
     ctx = canvas.getContext2D()
@@ -303,6 +303,14 @@ proc transformsTest*()=
   ctx.fillStyle = rgb(100, 230, 20)
   ctx.fillRect(75, 75, 30, 60)
 
+
+proc compositingTest()=
+  let
+    canvas = dom.document.getElementById("compositing-canvas").Canvas
+    ctx = canvas.getContext2D()
+
+   
+
   
 
 
@@ -317,4 +325,5 @@ dom.window.onload = proc(e: dom.Event) =
   paths1Test()
   paths2Test()
   transformsTest()
+  compositingTest()
 
