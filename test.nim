@@ -1,5 +1,5 @@
 import dom
-from math import Pi, sqrt
+import math
 import html5_canvas
 
 
@@ -221,7 +221,59 @@ proc paths2Test()=
     canvas = dom.document.getElementById("paths-2-canvas").Canvas
     ctx = canvas.getContext2D()
 
+  # Make a star of sorts
+  var
+    points:seq[tuple[x:float, y:float]] = @[]
+    theta = -90.0
+    r = 30.0
 
+  for i in 0..<12:
+    let
+      angle = theta * Pi / 180.0
+      x = r * cos(angle)
+      y = r * sin(angle)
+
+    points.add((x, y))
+    theta += 135
+    
+
+  # Draw with simply lines
+  ctx.strokeStyle = rgb(200, 0, 50)
+  ctx.moveTo(points[0].x + 50, points[1].y + 50)
+  ctx.beginPath()
+  for i in 1..high(points):
+    ctx.lineTo(points[i].x + 50, points[i].y + 50)
+  ctx.stroke()
+  ctx.closePath()
+
+
+  # Fill draw (NonZero)
+  ctx.fillStyle = rgb(50, 0, 200)
+  ctx.moveto(points[0].x + 150, points[0].y + 50)
+  ctx.beginPath()
+  for i in 1..high(points):
+    ctx.lineTo(points[i].x + 150, points[i].y + 50)
+  ctx.fill()
+  ctx.closePath()
+
+  # Fill draw (EvenOdd)
+  ctx.fillStyle = rgb(200, 0, 200)
+  ctx.moveto(points[0].x + 150, points[0].y + 150)
+  ctx.beginPath()
+  for i in 1..high(points):
+    ctx.lineTo(points[i].x + 150, points[i].y + 150)
+  ctx.fill(EvenOdd)
+  ctx.closePath()
+
+  # Clipping
+  ctx.fillStyle = rgb(50, 0, 50)
+  ctx.arc(25, 175, 50, 0, 2 * Pi)
+  ctx.clip(NonZero)
+  ctx.fillRect(5, 125, 50, 50)
+
+  echo "Forget about what you're going to see below, just testing some \"point in path/stroke\" values:"
+  echo ctx.isPointInStroke(20, 180)
+  echo ctx.isPointInPath(20, 180, NonZero)
 
 
 # The dom on load

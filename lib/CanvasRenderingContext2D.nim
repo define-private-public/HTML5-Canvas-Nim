@@ -99,8 +99,8 @@ const
   MiterJoin* = "miter".LineJoin
 
   # FillRule
-  NonZero = "nonzero".FillRule
-  EvenOdd = "evenodd".FillRule
+  NonZero* = "nonzero".FillRule
+  EvenOdd* = "evenodd".FillRule
 
     
 

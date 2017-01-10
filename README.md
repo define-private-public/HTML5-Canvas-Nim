@@ -77,11 +77,11 @@ Key: `b`=bound, `x`=bound & tested
 [x] arcTo()
 [x] ellipse()  [EXP]
 [x] rect()
-[b] fill()
-[b] stroke()
-[b] clip()
-[b] isPointInPath()
-[b] isPointInStroke()
+[x] fill()
+[x] stroke()
+[x] clip()
+[x] isPointInPath()
+[x] isPointInStroke()
 [ ] currentTransform
 [ ] rotate()
 [ ] scale()
@@ -107,6 +107,6 @@ Key: `b`=bound, `x`=bound & tested
 
 
 Extra:
-[ ] shadowOffset to take Nim's tuples instead?
 [ ] SVGMatrix <-> Nim Matrix
 [ ] Play nice with `colors` module
+
