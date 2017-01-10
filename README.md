@@ -14,7 +14,8 @@ This is still a work in progress, expect a better README later.
 TODO:
  - [ ] Professional README
    - Don't forget to link to the mozilla docs
-   - 2D drawing canvas only (maybe other ones)?
+   - 2D drawing canvas only (maybe other ones in the future)
+     - link to webgl package
    - If something doesn't have support accross all major browsers, it's not supported
    - Most experimental things aren't included, unless is has major support (see above)
    - for `createPattern()`, only <img>, <canvas>, `ImageData`, and `CanvasRenderingContext2D` are supported
@@ -41,7 +42,6 @@ Key: `b`=bound, `x`=bound & tested
 [x] width 
 [x] height
 [x] toDataURL()
-[ ] getContext()  [Only a hard coded one for 2D exists, add a generic one too]
 [x] clearRect()
 [x] fillRect()
 [x] strokeRect()
