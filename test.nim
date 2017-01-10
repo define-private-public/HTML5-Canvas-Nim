@@ -360,8 +360,33 @@ proc imageDraw2Test()=
 
   ctx.drawImage(src1, 0, 0, 100, 200)
   ctx.drawImage(src2, 65, 65, 40, 60, 100, 0, 100, 200)
-  
 
+
+proc stateTest()=
+  let
+    canvas = dom.document.getElementById("state-canvas").Canvas
+    ctx = canvas.getContext2D()
+
+  ctx.strokeStyle = rgb(80, 255, 80)
+  ctx.lineWidth = 5
+  ctx.save()
+
+  ctx.strokeStyle = rgb(0, 80, 255)
+  ctx.fillStyle = rgb(255, 80, 0)
+  ctx.translate(100, 10)
+  ctx.rotate(60 * Pi / 180)
+  ctx.fillRect(10, 0, 100, 100)
+  ctx.strokeRect(10, 0, 100, 100)
+
+  ctx.restore()
+  ctx.strokeRect(150, 150, 45, 45)
+  ctx.fillRect(155, 155, 35, 35)
+
+  # Verify some stuff
+  echo "Testing to see if a Canvas matches, look the other way:"
+  echo "same:", (canvas == ctx.canvas)
+
+  
 
 # The dom on load
 dom.window.onload = proc(e: dom.Event) =
@@ -377,4 +402,5 @@ dom.window.onload = proc(e: dom.Event) =
   compositingTest()
   imageDraw1Test()
   imageDraw2Test()
+  stateTest()
 

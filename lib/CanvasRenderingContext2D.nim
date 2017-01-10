@@ -401,3 +401,12 @@ proc drawImage*(
   dWidth, dHeight: float;
 ) {.importcpp.}
 
+
+# TODO Pixel manipulation
+
+
+# Canvas State
+proc save*(ctx: CanvasRenderingContext2D) {.importcpp.}
+
+proc restore*(ctx: CanvasRenderingContext2D) {.importcpp.}
+

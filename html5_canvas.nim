@@ -16,3 +16,7 @@ include lib/CanvasRenderingContext2D
 proc getContext2D*(c: Canvas): CanvasRenderingContext2D {.inline.} =
   {.emit: [result, "=", c, ".getContext('2d');"].}
 
+# Getting the <canvas> from the context
+proc canvas*(ctx: CanvasRenderingContext2D): Canvas {.inline.} =
+ {.emit: [result, "=", ctx, ".canvas;"].}
+

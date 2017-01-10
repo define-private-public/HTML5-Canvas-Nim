@@ -98,12 +98,11 @@ Key: `b`=bound, `x`=bound & tested
 [ ] createImageData()
 [ ] getImageData()
 [ ] putImageData()
-[ ] save()
-[ ] restore()
-[ ] canvas
+[x] save()
+[x] restore()
+[x] canvas
 
 
 Extra:
-[ ] SVGMatrix <-> Nim Matrix
 [ ] Play nice with `colors` module
 
