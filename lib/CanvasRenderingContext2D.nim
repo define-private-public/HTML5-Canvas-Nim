@@ -1,4 +1,7 @@
 # Contains the CanvasRenderingContext2D bindings
+from dom import ImageElement
+
+export ImageElement
 
 
 type
@@ -350,4 +353,28 @@ proc setTransform*(
 proc resetTransform*(ctx: CanvasRenderingContext2D) {.inline.} =
   ctx.setTransform(1, 0, 0, 1, 0, 0)
   
+
+# Image Drawing
+# TODO Canvas as an image source
+proc drawImage*(
+  ctx: CanvasRenderingContext2D;
+  image: ImageElement;
+  dx, dy: float
+) {.importcpp.}
+
+proc drawImage*(
+  ctx: CanvasRenderingContext2D;
+  image: ImageElement;
+  dx, dy: float;
+  dWidth, dHeight: float;
+) {.importcpp.}
+
+proc drawImage*(
+  ctx: CanvasRenderingContext2D;
+  image: ImageElement;
+  sx, sy: float;
+  sWidth, sHeight: float;
+  dx, dy: float;
+  dWidth, dHeight: float;
+) {.importcpp.}
 
