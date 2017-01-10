@@ -355,7 +355,7 @@ proc resetTransform*(ctx: CanvasRenderingContext2D) {.inline.} =
   
 
 # Image Drawing
-# TODO Canvas as an image source
+# Using an <img> as an image source
 proc drawImage*(
   ctx: CanvasRenderingContext2D;
   image: ImageElement;
@@ -372,6 +372,29 @@ proc drawImage*(
 proc drawImage*(
   ctx: CanvasRenderingContext2D;
   image: ImageElement;
+  sx, sy: float;
+  sWidth, sHeight: float;
+  dx, dy: float;
+  dWidth, dHeight: float;
+) {.importcpp.}
+
+# Using a <canvas> as an image source
+proc drawImage*(
+  ctx: CanvasRenderingContext2D;
+  image: Canvas;
+  dx, dy: float
+) {.importcpp.}
+
+proc drawImage*(
+  ctx: CanvasRenderingContext2D;
+  image: Canvas;
+  dx, dy: float;
+  dWidth, dHeight: float;
+) {.importcpp.}
+
+proc drawImage*(
+  ctx: CanvasRenderingContext2D;
+  image: Canvas;
   sx, sy: float;
   sWidth, sHeight: float;
   dx, dy: float;

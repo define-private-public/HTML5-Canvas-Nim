@@ -336,7 +336,7 @@ proc compositingTest()=
 
 proc imagesTest()=
   let
-    canvas = dom.document.getElementById("images-canvas").Canvas
+    canvas = dom.document.getElementById("image-drawing-1-canvas").Canvas
     ctx = canvas.getContext2D()
     kevin = dom.document.getElementbyId("kevin-bacon").ImageElement
 
