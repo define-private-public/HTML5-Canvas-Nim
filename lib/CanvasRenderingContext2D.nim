@@ -107,19 +107,19 @@ const
 
 # Rectangle functions
 proc clearRect*(
-  c: CanvasRenderingContext2D;
+  ctx: CanvasRenderingContext2D;
   x, y: float;
   width, height: float
 ) {.importcpp.}
 
 proc fillRect*(
-  c: CanvasRenderingContext2D;
+  ctx: CanvasRenderingContext2D;
   x, y: float;
   width, height: float
 ) {.importcpp.}
 
 proc strokeRect*(
-  c: CanvasRenderingContext2D;
+  ctx: CanvasRenderingContext2D;
   x, y: float;
   width, height: float
 ) {.importcpp.}
@@ -127,55 +127,55 @@ proc strokeRect*(
 
 # Text functions
 proc fillText*(
-  c: CanvasRenderingContext2D;
+  ctx: CanvasRenderingContext2D;
   text: cstring;
   x, y: float
 ) {.importcpp.}
 
 proc fillText*(
-  c: CanvasRenderingContext2D;
+  ctx: CanvasRenderingContext2D;
   text: cstring;
   x, y: float;
   maxWidth: float
 ) {.importcpp.}
 
 proc strokeText*(
-  c: CanvasRenderingContext2D;
+  ctx: CanvasRenderingContext2D;
   text: cstring;
   x, y: float
 ) {.importcpp.}
 
 proc strokeText*(
-  c: CanvasRenderingContext2D;
+  ctx: CanvasRenderingContext2D;
   text: cstring;
   x, y: float;
   maxWidth: float
 ) {.importcpp.}
 
 proc measureText*(
-  c: CanvasRenderingContext2D;
+  ctx: CanvasRenderingContext2D;
   text: cstring
 ): TextMetrics {.importcpp.}
 
 
 # Line functions
-proc getLineDash*(c: CanvasRenderingContext2D): seq[float] {.importcpp.} 
+proc getLineDash*(ctx: CanvasRenderingContext2D): seq[float] {.importcpp.} 
 
 proc setLineDash*(
-  c: CanvasRenderingContext2D;
+  ctx: CanvasRenderingContext2D;
   segments: seq[float]
 ) {.importcpp.}
 
 
 # Gradients and Patterns
 proc createLinearGradient*(
-  c: CanvasRenderingContext2D;
+  ctx: CanvasRenderingContext2D;
   x0, y0: float;
   x1, y1: float;
 ): CanvasGradient {.importcpp.}
 
 proc createRadialGradient*(
-  c: CanvasRenderingContext2D;
+  ctx: CanvasRenderingContext2D;
   x0, y0: float;
   r0: float;
   x1, y1: float;
@@ -184,35 +184,35 @@ proc createRadialGradient*(
 
 
 # Path manipulation
-proc beginPath*(c: CanvasRenderingContext2D) {.importcpp.}
+proc beginPath*(ctx: CanvasRenderingContext2D) {.importcpp.}
 
-proc closePath*(c: CanvasRenderingContext2D) {.importcpp.}
+proc closePath*(ctx: CanvasRenderingContext2D) {.importcpp.}
 
 proc moveTo*(
-  c: CanvasRenderingContext2D;
+  ctx: CanvasRenderingContext2D;
   x, y: float
 ) {.importcpp.}
 
 proc lineTo*(
-  c: CanvasRenderingContext2D;
+  ctx: CanvasRenderingContext2D;
   x, y: float
 ) {.importcpp.}
 
 proc bezierCurveTo*(
-  c: CanvasRenderingContext2D;
+  ctx: CanvasRenderingContext2D;
   cp1x, cp1y: float;
   cp2x, cp2y: float;
   x, y: float
 ) {.importcpp.}
 
 proc quadraticCurveTo*(
-  c: CanvasRenderingContext2D;
+  ctx: CanvasRenderingContext2D;
   cpx, cpy: float;
   x, y: float
 ) {.importcpp.}
 
 proc arc*(
-  c: CanvasRenderingContext2D;
+  ctx: CanvasRenderingContext2D;
   x, y: float;
   radius: float;
   startAngle, endAngle: float;
@@ -220,7 +220,7 @@ proc arc*(
 ) {.importcpp.}
 
 proc arcTo*(
-  c: CanvasRenderingContext2D;
+  ctx: CanvasRenderingContext2D;
   x1, y1: float;
   x2, y2: float;
   radius: float;
@@ -228,7 +228,7 @@ proc arcTo*(
 
 # Note: this function works in Edge but not IE
 proc ellipse*(
-  c: CanvasRenderingContext2D;
+  ctx: CanvasRenderingContext2D;
   x, y: float;
   radiusX, radiusY: float;
   rotation: float;
@@ -237,64 +237,64 @@ proc ellipse*(
 ) {.importcpp.}
 
 proc rect*(
-  c: CanvasRenderingContext2D;
+  ctx: CanvasRenderingContext2D;
   x, y: float;
   width, height: float;
 ) {.importcpp.}
 
 
 # Path drawing
-proc fill*(c: CanvasRenderingContext2D) {.importcpp.}
+proc fill*(ctx: CanvasRenderingContext2D) {.importcpp.}
 
 proc fill*(
-  c: CanvasRenderingContext2D;
+  ctx: CanvasRenderingContext2D;
   fillRule: FillRule
 ) {.importcpp.}
 
-proc stroke*(c: CanvasRenderingContext2D) {.importcpp.}
+proc stroke*(ctx: CanvasRenderingContext2D) {.importcpp.}
 
-proc clip*(c: CanvasRenderingContext2D) {.importcpp.}
+proc clip*(ctx: CanvasRenderingContext2D) {.importcpp.}
 
 proc clip*(
-  c: CanvasRenderingContext2D;
+  ctx: CanvasRenderingContext2D;
   fillRule: FillRule
 ) {.importcpp.}
 
 proc isPointInPath*(
-  c: CanvasRenderingContext2D;
+  ctx: CanvasRenderingContext2D;
   x, y: float
 ): bool {.importcpp.}
 
 proc isPointInPath*(
-  c: CanvasRenderingContext2D;
+  ctx: CanvasRenderingContext2D;
   x, y: float;
   fillRule: FillRule
 ): bool {.importcpp.}
 
 proc isPointInStroke*(
-  c: CanvasRenderingContext2D;
+  ctx: CanvasRenderingContext2D;
   x, y: float
 ): bool {.importcpp.}
 
 
 # Transformations
 proc rotate*(
-  c: CanvasRenderingContext2D;
+  ctx: CanvasRenderingContext2D;
   angle: float
 ) {.importcpp.}
 
 proc scale*(
-  c: CanvasRenderingContext2D;
+  ctx: CanvasRenderingContext2D;
   x, y: float
 ) {.importcpp.}
 
 proc translate*(
-  c: CanvasRenderingContext2D;
+  ctx: CanvasRenderingContext2D;
   x, y: float
 ) {.importcpp.}
 
 proc transform*(
-  c: CanvasRenderingContext2D;
+  ctx: CanvasRenderingContext2D;
   a: float;   # Horizontal scaling
   b: float;   # Horizontal skewing
   c: float;   # Vertical skewing
@@ -304,7 +304,7 @@ proc transform*(
 ) {.importcpp.}
 
 proc setTransform*(
-  c: CanvasRenderingContext2D;
+  ctx: CanvasRenderingContext2D;
   a: float;   # Horizontal scaling
   b: float;   # Horizontal skewing
   c: float;   # Vertical skewing
