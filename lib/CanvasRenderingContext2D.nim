@@ -261,7 +261,6 @@ proc createPattern*(
   repetition: Repetition
 ): CanvasPattern {.importcpp.}
 
-# TODO test
 proc createPattern*(
   ctx: CanvasRenderingContext2D;
   image: ImageData;

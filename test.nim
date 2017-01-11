@@ -1,12 +1,9 @@
 import dom
 import math
 import html5_canvas
+import colors
 
 
-# TODO test creating a canvas dynamically
-
-
-# A Blank canvas for canvas info
 proc canvasTest()=
   let
     canvas = dom.document.getElementById("info-canvas").Canvas
@@ -61,7 +58,7 @@ proc rectTest()=
     canvas = dom.document.getElementById("rect-canvas").Canvas
     ctx = canvas.getContext2D()
 
-  ctx.fillStyle = "green"
+  ctx.fillStyle = rgb(colDarkGreen)   # Using a Nim `colors` module color!
   ctx.fillRect(10, 10.5, 125.5, 125)
 
   ctx.clearRect(20, 20, 25, 27.5)
@@ -445,6 +442,20 @@ proc stateTest()=
   echo "same:", (canvas == ctx.canvas)
 
 
+proc dynamicCreationTest()=
+  echo "Testing dynamic canvas creation:"
+   
+  var canvas = dom.document.createElement("canvas").Canvas
+  let ctx = canvas.getContext2D()
+  dom.document.body.appendChild(canvas)
+
+  canvas.width = 100
+  canvas.height = 100
+
+  ctx.textAlign = Center
+  ctx.textBaseline = Middle
+
+  ctx.fillText("I'm new here.", 50, 50)
   
 
 # The dom on load
@@ -463,4 +474,8 @@ dom.window.onload = proc(e: dom.Event) =
   imageDraw1Test()
   imageDraw2Test()
   stateTest()
+  dynamicCreationTest()
+
+
+
 

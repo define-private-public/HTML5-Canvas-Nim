@@ -3,7 +3,7 @@ HTML5 Canvas & Drawing for Nim
 
 This is a light wrapper of the HTML5 Canvas Drawing API for Nim's JavaScript
 target.  It can be found on nimble as the `html5_canvas` package. The current
-version is `v1.1`.
+version is `v1.2`.
 
 The official repo can be found on GitLab:
 https://gitlab.com/define-private-public/HTML5-Canvas-Nim
@@ -55,7 +55,7 @@ Because of Nim there are some limitations and differences though:
    and `CanvasRenderingContext2D`.
  - `drawImage()` only supports Image, and Canvas as sources right now.
  - The `strokeStyle` and `fillStyle` fields in the rendering context can be
-   simply set but using an `=` with different types (e.g. `ctx.fillStyle =
+   simply set but using an `=` with different types, e.g. `ctx.fillStyle =
    rgb(255, 0, 255)` or `ctx.fillStyle = canvas.createLinearGradient(0, 0, 100,
    100)`.  Yet when retriving their values you'll need to add the type onto the
    identifier.  These procs are:
@@ -66,6 +66,12 @@ Because of Nim there are some limitations and differences though:
    - `strokeStyleGradient`
    - `strokeStylePattern`
 
+I've added in support for using colors from Nim's `colors` module.  You still
+need to wrap it in the `rgb()` proc though.  E.g:
+
+    import colors
+    ctx.fillStyle = rgb(colDarkGreen)
+
 I recommend looking through the `test.nim` file's `*Test()` functions if you are
 confused at all.
 
@@ -75,9 +81,6 @@ License
 
 This wrapper is available under the MIT license.  Please see the file
 `LICENSE.txt` for details.
-
-Extra:
- - [ ] Play nice with `colors` module
 
 
 
