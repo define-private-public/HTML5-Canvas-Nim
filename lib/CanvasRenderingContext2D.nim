@@ -74,6 +74,27 @@ proc `strokeStyle=`*(
 ) {.inline.} =
   {.emit: [ctx, ".strokeStyle=", pattern, ";"].}
 
+# These are getters for the procs above.  Their behavior is undefined if you
+# pair their calls with the incorrect type
+# fillStyle
+proc fillStyleColor*(ctx: CanvasRenderingContext2D): cstring {.inline.} =
+  {.emit: [result, "=", ctx, ".fillStyle;"].}
+
+proc fillStyleGradient*(ctx: CanvasRenderingContext2D): CanvasGradient {.inline.} =
+  {.emit: [result, "=", ctx, ".fillStyle;"].}
+
+proc fillStylePattern*(ctx: CanvasRenderingContext2D): CanvasPattern {.inline.} =
+  {.emit: [result, "=", ctx, ".fillStyle;"].}
+
+# strokeStyle
+proc strokeStyleColor*(ctx: CanvasRenderingContext2D): cstring {.inline.} =
+  {.emit: [result, "=", ctx, ".strokeStyle;"].}
+
+proc strokeStyleGradient*(ctx: CanvasRenderingContext2D): CanvasGradient {.inline.} =
+  {.emit: [result, "=", ctx, ".strokeStyle;"].}
+
+proc strokeStylePattern*(ctx: CanvasRenderingContext2D): CanvasPattern {.inline.} =
+  {.emit: [result, "=", ctx, ".strokeStyle;"].}
 
 
 const

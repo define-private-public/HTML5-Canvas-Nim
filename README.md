@@ -8,7 +8,7 @@ It is where most of the develoment takes place.  But there is a GitHub mirror
 where issues can be logged and will be addressed:
 https://github.com/define-private-public/HTML5-Canvas-Nim
 
-This is still a work in progress, expect a better README later.
+The current version is `v1.1`.
 
 
 TODO:
@@ -26,83 +26,10 @@ TODO:
    - drawImage() only uses <image> and <canvas> as sources right now
    - Some fonts might render differently in differnt browsers (e.g. Serif 48px in Chrome vs. Firefox)
    - If something is not supported that you think should be, create an issue on the tracker
- - [x] List of functions/properties to bind (https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D)
- - [ ] some examples/tests
- - [x] GitHub mirror
+   - `stroke/fillStyle`'s getters and setters
  - [ ] License mention in README
- - [ ] Check into using enumerations instead of making the programmer pass in strings
-   - e.g. the `lineCap` field
-
-
-To Bind & Test.
-Key: `b`=bound, `x`=bound & tested
-
-[x] rgb()
-[x] Canvas
-[x] width 
-[x] height
-[x] toDataURL()
-[x] clearRect()
-[x] fillRect()
-[x] strokeRect()
-[x] TextMetrics
-[x] fillText()
-[x] strokeText()
-[x] measureText()
-[x] lineWidth
-[x] lineCap
-[x] lineJoin
-[x] miterLimit
-[x] lineDashOffset
-[x] getLineDash()
-[x] setLineDash()
-[x] font
-[x] textAlign
-[x] textBaseline
-[x] CanvasGradient
-[x] addColorStop()
-[x] CanvasPattern
-[x] fillStyle   [There's a set, but what about get?]
-[x] strokeStyle [See above]
-[x] createLinearGradient()
-[x] createRadialGraident()
-[x] createPattern()
-[x] shadowBlur
-[x] shadowColor
-[x] shadowOffsetX
-[x] shadowOffsetY
-[x] beginPath()
-[x] closePath()
-[x] moveTo()
-[x] lineTo()
-[x] bezierCurveTo()
-[x] quadraticCurveTo()
-[x] arc()
-[x] arcTo()
-[x] ellipse()  [EXP]
-[x] rect()
-[x] fill()
-[x] stroke()
-[x] clip()
-[x] isPointInPath()
-[x] isPointInStroke()
-[x] rotate()
-[x] scale()
-[x] translate()
-[x] transform()
-[x] setTransform()
-[x] globalAlpha
-[x] globalCompositeOperation
-[x] drawImage()
-[x] ImageData
-[x] createImageData()
-[x] getImageData()
-[x] putImageData()
-[x] save()
-[x] restore()
-[x] canvas
 
 
 Extra:
-[ ] Play nice with `colors` module
+ - [ ] Play nice with `colors` module
 

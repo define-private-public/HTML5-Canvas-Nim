@@ -1,6 +1,6 @@
 [Package]
 name          = "html5_canvas"
-version       = "1.0"
+version       = "1.1"
 author        = "define-private-public"
 description   = "HTML5 Canvas and drawing for the JavaScript backend."
 license       = "MIT"
