@@ -7,13 +7,13 @@ when not defined(js) and not defined(Nimdoc):
 
 
 import dom
-include lib/rgb
-include lib/ImageData
-include lib/TextMetrics
-include lib/CanvasGradient
-include lib/CanvasPattern
-include lib/Canvas
-include lib/CanvasRenderingContext2D
+include html5_canvas/rgb
+include html5_canvas/ImageData
+include html5_canvas/TextMetrics
+include html5_canvas/CanvasGradient
+include html5_canvas/CanvasPattern
+include html5_canvas/Canvas
+include html5_canvas/CanvasRenderingContext2D
 
 
 # The combinded functions go here:
