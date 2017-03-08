@@ -3,7 +3,7 @@ HTML5 Canvas & Drawing for Nim
 
 This is a light wrapper of the HTML5 Canvas Drawing API for Nim's JavaScript
 target.  It can be found on nimble as the `html5_canvas` package. The current
-version is `v1.2`.
+version is `v1.3`.
 
 The official repo can be found on GitLab:
 https://gitlab.com/define-private-public/HTML5-Canvas-Nim
