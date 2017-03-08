@@ -8,3 +8,5 @@ license       = "MIT"
 [Deps]
 Requires: "nim >= 0.16.0"
 
+skipFiles = @["kevin-bacon.jpg", "pattern.png", "test.html", "test.nim"]
+
